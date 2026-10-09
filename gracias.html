@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ya tienes la biblioteca · itskeo</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0e1311">
+  <script>if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('anim');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-abajo" viewBox="0 0 256 256"><path fill="currentColor" d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 256 256"><path fill="currentColor" d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></symbol>
+    <symbol id="i-derecha" viewBox="0 0 256 256"><path fill="currentColor" d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
+  </svg>
+
+  <header class="nav">
+    <div class="wrap nav__fila">
+      <span class="marca">itskeo<span>/comunidad</span></span>
+      <a class="btn btn--secundario" data-url="urlBiblioteca" href="https://whop.com/itskeo/biblioteca-de-prompts/">Ir a la biblioteca</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap heroe">
+      <p class="aviso aviso--ok entrar" role="status">Listo. Ya tienes acceso a la biblioteca de prompts.</p>
+      <h1 class="titulo entrar" style="--retraso:.06s">Antes de irte, <span>una cosa más.</span></h1>
+      <p class="lead entrar" style="--retraso:.12s">Hice Comunidad Plus para quien quiera apoyar lo que hago. Son 5 USD al mes.</p>
+      <div class="heroe__acciones entrar" style="--retraso:.18s">
+        <a class="btn btn--primario btn--grande" href="#plus">Unirme a Plus <svg class="icon" aria-hidden="true"><use href="#i-abajo"/></svg></a>
+        <a class="micro" data-url="urlBiblioteca" href="https://whop.com/itskeo/biblioteca-de-prompts/">No gracias, ir a la biblioteca</a>
+      </div>
+    </section>
+
+    <section class="wrap seccion">
+      <h2 class="subtitulo revelar">Lo que te llevas <span>por 5 USD.</span></h2>
+      <ul class="lista">
+        <li class="revelar" style="--orden:1">
+          <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>
+          <h3>Mis skills</h3>
+          <p>Las mismas que uso para crear el contenido. Las instalas y las usas.</p>
+        </li>
+        <li class="revelar" style="--orden:2">
+          <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>
+          <h3>Tutoriales y videos</h3>
+          <p>Cómo hago lo que ves en TikTok, paso a paso y con más detalle.</p>
+        </li>
+        <li class="revelar" style="--orden:3">
+          <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>
+          <h3>Todo lo nuevo, apenas sale</h3>
+          <p>Cada vez que saco algo, se suma a tu acceso. No pagas más por eso.</p>
+        </li>
+        <li class="revelar" style="--orden:4">
+          <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>
+          <h3>La biblioteca de prompts y lo demás</h3>
+          <p>Todo lo gratis sigue siendo tuyo, junto con lo de Plus.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="wrap seccion">
+      <h2 class="subtitulo revelar">Por qué <span>5 USD.</span></h2>
+      <p class="cita revelar" style="margin-top:20px">
+        No es para hacerme rico. Es casi simbólico. <strong>Me ayuda a seguir trayendo contenido de calidad</strong>, con más tiempo para cada video. Si lo que hago te sirve, esta es la forma más directa de apoyarlo.
+      </p>
+    </section>
+
+    <section class="wrap seccion" id="plus">
+      <div class="oferta">
+        <div class="oferta__texto revelar">
+          <h2 class="subtitulo">Comunidad Plus. <span>Cancelas cuando quieras.</span></h2>
+          <div class="precio"><strong>5 USD</strong><span>al mes</span></div>
+          <p>Pagas, entras directo a la comunidad y empiezas a ver todo.</p>
+        </div>
+        <div class="panel revelar" style="--orden:1">
+          <div class="checkout" data-checkout="planPlus" data-siguiente="bienvenido.html"></div>
+          <p class="checkout__pie">Checkout seguro con Whop.</p>
+        </div>
+      </div>
+
+      <div class="salir revelar">
+        <a class="btn btn--secundario" data-url="urlBiblioteca" href="https://whop.com/itskeo/biblioteca-de-prompts/">No gracias, ir a la biblioteca <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
+        <span class="micro">Tu acceso gratis ya está listo.</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap pie">
+    <p class="pie__frase">Gracias por estar aquí. <span>Con o sin Plus.</span></p>
+    <div class="pie__fila">
+      <span>© itskeo</span>
+      <a class="btn btn--secundario" data-url="urlTiktok" href="https://www.tiktok.com/@itskeo5" target="_blank" rel="noopener">Seguir en TikTok</a>
+    </div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

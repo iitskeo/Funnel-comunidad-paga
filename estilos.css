@@ -1,0 +1,157 @@
+/* Estilos propios del funnel. Los tokens y componentes base están en tokens.css. */
+
+main {
+  padding-bottom: 8px;
+}
+
+.heroe {
+  padding-top: clamp(56px, 10vw, 120px);
+  display: grid;
+  gap: 24px;
+  justify-items: start;
+}
+.heroe .titulo {
+  max-width: 14ch;
+}
+.heroe__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 20px;
+  margin-top: 8px;
+}
+.micro {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* Lista vertical de beneficios (en vez de tarjetas en fila) */
+.lista {
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  max-width: 760px;
+}
+.lista li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 16px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+.lista .icon {
+  grid-row: span 2;
+  margin-top: 3px;
+  color: var(--accent);
+}
+.lista h3 {
+  font-family: var(--display);
+  font-size: 1.0625rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+.lista p {
+  color: var(--muted);
+  max-width: 55ch;
+}
+
+/* Bloque de oferta + checkout */
+.oferta {
+  display: grid;
+  gap: 32px;
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .oferta {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+    gap: 64px;
+  }
+  .oferta__texto {
+    position: sticky;
+    top: calc(var(--nav-h) + 32px);
+  }
+}
+.oferta__texto {
+  display: grid;
+  gap: 16px;
+}
+.oferta__texto p {
+  color: var(--muted);
+  max-width: 42ch;
+}
+.precio {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+.precio strong {
+  font-size: clamp(2.75rem, 6vw, 4rem);
+}
+.precio span {
+  font-size: 1.125rem;
+  color: var(--muted);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.checkout {
+  min-height: 420px;
+}
+.checkout__pie {
+  margin-top: 16px;
+  font-size: 0.875rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.cita {
+  max-width: 60ch;
+  font-size: 1.125rem;
+  color: var(--muted);
+  text-wrap: pretty;
+}
+.cita strong {
+  color: var(--text);
+  font-weight: 550;
+}
+
+.salir {
+  margin-top: 40px;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.pie__fila {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* Bienvenida: centrada y a pantalla completa */
+.centro {
+  min-height: calc(100dvh - var(--nav-h));
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 24px;
+  text-align: center;
+  padding-block: 48px;
+}
+.centro .titulo {
+  max-width: 14ch;
+}
+.centro .lead {
+  margin-inline: auto;
+}
