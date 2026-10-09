@@ -238,10 +238,6 @@ main {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 64px;
   }
-  .upsell .panel {
-    position: sticky;
-    top: calc(var(--nav-h) + 24px);
-  }
   .solo-movil {
     display: none;
   }
@@ -260,13 +256,9 @@ main {
   font-size: clamp(2rem, 4vw, 2.75rem);
 }
 .llevas {
-  padding-top: 40px;
+  width: 100%;
+  margin-top: 16px;
 }
 .llevas .lista {
-  margin-top: 20px;
-}
-@media (min-width: 900px) {
-  .llevas > * {
-    max-width: calc(50% - 32px);
-  }
+  margin-top: 16px;
 }
