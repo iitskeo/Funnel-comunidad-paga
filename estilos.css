@@ -155,3 +155,67 @@ main {
 .centro .lead {
   margin-inline: auto;
 }
+
+/* Landing en una sola pantalla: texto y checkout juntos */
+.landing {
+  min-height: calc(100dvh - var(--nav-h));
+  display: grid;
+  align-content: center;
+  gap: 24px;
+  padding-block: 24px 32px;
+}
+@media (min-width: 900px) {
+  .landing {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 64px;
+  }
+}
+.landing__texto {
+  display: grid;
+  gap: 16px;
+}
+.titulo-heroe {
+  font-family: var(--display);
+  font-size: clamp(1.875rem, 3.2vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  max-width: 14ch;
+}
+.titulo-heroe span {
+  color: var(--muted);
+}
+.landing .lead {
+  font-size: 1rem;
+}
+@media (min-width: 900px) {
+  .landing .lead {
+    font-size: 1.125rem;
+  }
+}
+.puntos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+  font-size: 0.9375rem;
+}
+.puntos li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.puntos .icon {
+  color: var(--accent);
+}
+.panel--checkout {
+  padding: 12px;
+}
+.panel--checkout .checkout {
+  min-height: 320px;
+}
+.panel--checkout .checkout__pie {
+  margin-top: 8px;
+}

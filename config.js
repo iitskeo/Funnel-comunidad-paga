@@ -3,8 +3,8 @@
 */
 window.FUNNEL = {
   // Planes de Whop (embedded checkout)
-  planBiblioteca: 'plan_RhVl5CaluBGH1', // Biblioteca de prompts, gratis
-  planPlus: 'plan_SzoerRi0rgRxC', // Comunidad Plus, 5 USD al mes
+  planBiblioteca: 'plan_SzoerRi0rgRxC', // Biblioteca de prompts, gratis
+  planPlus: 'plan_RhVl5CaluBGH1', // Comunidad Plus, 5 USD al mes
 
   // A dónde va la gente después de cada paso
   urlBiblioteca: 'https://whop.com/itskeo/biblioteca-de-prompts/',
