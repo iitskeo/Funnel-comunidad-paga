@@ -219,3 +219,9 @@ main {
 .panel--checkout .checkout__pie {
   margin-top: 8px;
 }
+
+.porque {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
