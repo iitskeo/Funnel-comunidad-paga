@@ -28,17 +28,27 @@
   </header>
 
   <main>
-    <section class="wrap heroe">
-      <p class="aviso aviso--ok entrar" role="status">Listo. Ya tienes acceso a la biblioteca de prompts.</p>
-      <h1 class="titulo entrar" style="--retraso:.06s">Antes de irte, <span>una cosa más.</span></h1>
-      <p class="lead entrar" style="--retraso:.12s">Hice Comunidad Plus para quien quiera apoyar lo que hago. Son 5 USD al mes.</p>
-      <div class="porque entrar" style="--retraso:.15s">
-        <h2 class="subtitulo">Por qué <span>5 USD.</span></h2>
-        <p class="cita">No es para hacerme rico. Es casi simbólico. <strong>Me ayuda a seguir trayendo contenido de calidad</strong>, con más tiempo para cada video. Si lo que hago te sirve, esta es la forma más directa de apoyarlo.</p>
+    <section class="wrap upsell">
+      <div class="upsell__texto">
+        <p class="aviso aviso--ok entrar" role="status">Listo. Ya tienes acceso a la biblioteca de prompts.</p>
+        <h1 class="titulo entrar" style="--retraso:.06s">Antes de irte, <span>una cosa más.</span></h1>
+        <p class="lead entrar" style="--retraso:.12s">Hice Comunidad Plus para quien quiera apoyar lo que hago. Son 5 USD al mes.</p>
+        <div class="porque entrar" style="--retraso:.15s">
+          <h2 class="subtitulo">Por qué <span>5 USD.</span></h2>
+          <p class="cita">No es para hacerme rico. Es casi simbólico. <strong>Me ayuda a seguir trayendo contenido de calidad</strong>, con más tiempo para cada video. Si lo que hago te sirve, esta es la forma más directa de apoyarlo.</p>
+        </div>
+        <div class="heroe__acciones entrar" style="--retraso:.2s">
+          <a class="btn btn--primario btn--grande solo-movil" href="#plus">Unirme a Plus <svg class="icon" aria-hidden="true"><use href="#i-abajo"/></svg></a>
+          <a class="micro" data-url="urlBiblioteca" href="https://whop.com/itskeo/exp_MoZZITX3DvCwNH/app/">No gracias, ir a la biblioteca</a>
+        </div>
       </div>
-      <div class="heroe__acciones entrar" style="--retraso:.2s">
-        <a class="btn btn--primario btn--grande" href="#plus">Unirme a Plus <svg class="icon" aria-hidden="true"><use href="#i-abajo"/></svg></a>
-        <a class="micro" data-url="urlBiblioteca" href="https://whop.com/itskeo/exp_MoZZITX3DvCwNH/app/">No gracias, ir a la biblioteca</a>
+      <div class="panel panel--checkout entrar" id="plus" style="--retraso:.22s">
+        <div class="panel__cabeza">
+          <div class="precio"><strong>5 USD</strong><span>al mes</span></div>
+          <span class="micro">Comunidad Plus. Cancelas cuando quieras.</span>
+        </div>
+        <div class="checkout" data-checkout="planPlus" data-siguiente="bienvenido.html"></div>
+        <p class="checkout__pie">Checkout seguro con Whop.</p>
       </div>
     </section>
 
@@ -68,19 +78,7 @@
       </ul>
     </section>
 
-    <section class="wrap seccion" id="plus">
-      <div class="oferta">
-        <div class="oferta__texto revelar">
-          <h2 class="subtitulo">Comunidad Plus. <span>Cancelas cuando quieras.</span></h2>
-          <div class="precio"><strong>5 USD</strong><span>al mes</span></div>
-          <p>Pagas, entras directo a la comunidad y empiezas a ver todo.</p>
-        </div>
-        <div class="panel revelar" style="--orden:1">
-          <div class="checkout" data-checkout="planPlus" data-siguiente="bienvenido.html"></div>
-          <p class="checkout__pie">Checkout seguro con Whop.</p>
-        </div>
-      </div>
-
+    <section class="wrap">
       <div class="salir revelar">
         <a class="btn btn--secundario" data-url="urlBiblioteca" href="https://whop.com/itskeo/exp_MoZZITX3DvCwNH/app/">No gracias, ir a la biblioteca <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
         <span class="micro">Tu acceso gratis ya está listo.</span>

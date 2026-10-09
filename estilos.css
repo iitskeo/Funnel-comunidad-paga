@@ -225,3 +225,37 @@ main {
   gap: 12px;
   margin-top: 16px;
 }
+
+/* Upsell: texto a la izquierda, checkout de Plus a la derecha */
+.upsell {
+  padding-top: clamp(32px, 6vw, 72px);
+  display: grid;
+  gap: 32px;
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .upsell {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 64px;
+  }
+  .upsell .panel {
+    position: sticky;
+    top: calc(var(--nav-h) + 24px);
+  }
+  .solo-movil {
+    display: none;
+  }
+}
+.upsell__texto {
+  display: grid;
+  gap: 20px;
+  justify-items: start;
+}
+.panel__cabeza {
+  display: grid;
+  gap: 4px;
+  padding: 8px 8px 16px;
+}
+.panel__cabeza .precio strong {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+}
