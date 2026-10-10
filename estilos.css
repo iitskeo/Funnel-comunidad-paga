@@ -245,6 +245,11 @@ main {
   .upsell .heroe__acciones .btn--primario .icon {
     display: none;
   }
+  /* El checkout queda al lado de "Lo que te llevas" y "Por qué 5 USD",
+     no en la primera pantalla */
+  .upsell .panel--checkout {
+    align-self: end;
+  }
 }
 .upsell__texto {
   display: grid;

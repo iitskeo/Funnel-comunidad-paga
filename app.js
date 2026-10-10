@@ -13,6 +13,17 @@
     if (url) a.href = url;
   });
 
+  // En escritorio algunos botones bajan a otro punto (ej. el checkout completo)
+  document.querySelectorAll('[data-escritorio]').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      if (!matchMedia('(min-width: 900px)').matches) return;
+      const destino = document.querySelector(a.dataset.escritorio);
+      if (!destino) return;
+      e.preventDefault();
+      destino.scrollIntoView({ block: 'start' });
+    });
+  });
+
   // Aparecer al hacer scroll
   const revelar = document.querySelectorAll('.revelar');
   if ('IntersectionObserver' in window) {
