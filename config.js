@@ -12,7 +12,7 @@ window.FUNNEL = {
   urlComunidad: 'https://whop.com/itskeo/', // "Ya tengo acceso" y "Entrar a Plus" de la landing
 
   // App de Whop en las tiendas (botón "Descargar la app"; si está vacío, no se muestra)
-  urlAppIOS: '',
+  urlAppIOS: 'https://apps.apple.com/app/whop/id1600181492',
   urlAppAndroid: 'https://play.google.com/store/search?q=whop&c=apps',
 
   urlTiktok: 'https://www.tiktok.com/@itskeo5',
