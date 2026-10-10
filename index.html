@@ -17,6 +17,7 @@
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="i-check" viewBox="0 0 256 256"><path fill="currentColor" d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></symbol>
     <symbol id="i-movil" viewBox="0 0 256 256"><path fill="currentColor" d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16Zm8,200a8,8,0,0,1-8,8H80a8,8,0,0,1-8-8V40a8,8,0,0,1,8-8h96a8,8,0,0,1,8,8ZM140,60a12,12,0,1,1-12-12A12,12,0,0,1,140,60Z"/></symbol>
+    <symbol id="i-abajo" viewBox="0 0 256 256"><path fill="currentColor" d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"/></symbol>
   </svg>
 
   <header class="nav">
@@ -35,10 +36,14 @@
         <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>0 USD, sin prueba ni cobro escondido</li>
         <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Cópialos y etiquétame con lo que salga</li>
       </ul>
-      <div class="ya-miembro entrar" style="--retraso:.26s">
-        <p><strong>¿Ya te uniste antes?</strong> No pongas tu correo otra vez aquí. Inicia sesión en Whop con tu correo y entras a todo lo que tienes.</p>
-        <div class="ya-miembro__botones">
-          <a class="btn btn--secundario btn--gratis" data-url="urlLogin" href="https://whop.com/login/">Iniciar sesión en Whop</a>
+      <div class="caminos entrar" style="--retraso:.26s">
+        <div class="camino">
+          <p><strong>¿Primera vez aquí?</strong> Pon tu correo en el formulario y entras gratis.</p>
+          <a class="btn btn--primario solo-movil" href="#unirme">Unirme gratis <svg class="icon" aria-hidden="true"><use href="#i-abajo"/></svg></a>
+        </div>
+        <div class="camino">
+          <p><strong>¿Ya te uniste antes?</strong> No pongas tu correo otra vez. Inicia sesión y entras a todo.</p>
+          <a class="btn btn--secundario btn--gratis" data-url="urlLogin" href="https://whop.com/login/">Iniciar sesión</a>
         </div>
       </div>
       <div class="app-aviso entrar" style="--retraso:.3s">
@@ -46,7 +51,7 @@
         <p><strong>Descarga la app de Whop</strong> para no perderte nada de la comunidad. Búscala como «Whop» en tu tienda e inicia sesión con el mismo correo.</p>
       </div>
     </div>
-    <div class="panel panel--checkout entrar" style="--retraso:.2s">
+    <div class="panel panel--checkout entrar" id="unirme" style="--retraso:.2s">
       <div class="checkout" data-checkout="planBiblioteca" data-siguiente="gracias.html"></div>
       <p class="checkout__pie">Checkout seguro con Whop.</p>
     </div>
