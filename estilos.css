@@ -347,3 +347,13 @@ main {
 .upsell .heroe__acciones .btn--grande {
   height: 60px;
 }
+.apoyo {
+  max-width: 40ch;
+  color: var(--text);
+  font-weight: 500;
+  text-wrap: pretty;
+}
+/* El banner de la app cierra la primera pantalla; lo demás va después */
+.upsell .llevas {
+  margin-top: 88px;
+}
