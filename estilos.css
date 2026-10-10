@@ -282,3 +282,31 @@ main {
     width: 100%;
   }
 }
+
+/* Landing: acceso para quien ya se unió antes */
+.ya-miembro {
+  display: grid;
+  gap: 12px;
+  margin-top: 8px;
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: var(--bg-2);
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+.ya-miembro strong {
+  color: var(--text);
+  font-weight: 600;
+}
+.ya-miembro__botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+@media (max-width: 480px) {
+  .ya-miembro__botones .btn {
+    flex: 1 1 0;
+    padding-inline: 12px;
+  }
+}
