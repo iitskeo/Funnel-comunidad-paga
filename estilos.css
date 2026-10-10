@@ -310,3 +310,35 @@ main {
     padding-inline: 12px;
   }
 }
+
+/* Aviso para descargar la app de Whop */
+.app-aviso {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px 12px;
+  align-items: start;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: color-mix(in oklab, var(--accent) 12%, var(--bg-2));
+  font-size: 0.9375rem;
+  color: var(--muted);
+  text-align: left;
+}
+.app-aviso .icon {
+  margin-top: 3px;
+  color: var(--accent);
+}
+.app-aviso strong {
+  color: var(--text);
+  font-weight: 600;
+}
+.app-aviso__btn {
+  grid-column: 2;
+  justify-self: start;
+  height: 40px;
+  padding-inline: 16px;
+}
+.centro .app-aviso {
+  max-width: 440px;
+}

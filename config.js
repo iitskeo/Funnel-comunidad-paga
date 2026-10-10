@@ -11,6 +11,10 @@ window.FUNNEL = {
   urlComunidadPlus: 'https://whop.com/itskeo/exp_IBUci0sjUP2q1Z/app/', // después de comprar Plus
   urlComunidad: 'https://whop.com/itskeo/', // "Ya tengo acceso" y "Entrar a Plus" de la landing
 
+  // App de Whop en las tiendas (botón "Descargar la app"; si está vacío, no se muestra)
+  urlAppIOS: '',
+  urlAppAndroid: 'https://play.google.com/store/search?q=whop&c=apps',
+
   urlTiktok: 'https://www.tiktok.com/@itskeo5',
 
   // 'production' para cobrar de verdad, 'sandbox' para probar
