@@ -333,12 +333,6 @@ main {
   color: var(--text);
   font-weight: 600;
 }
-.app-aviso__btn {
-  grid-column: 2;
-  justify-self: start;
-  height: 40px;
-  padding-inline: 16px;
-}
 .centro .app-aviso {
   max-width: 440px;
 }

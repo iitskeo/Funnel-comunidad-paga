@@ -13,18 +13,6 @@
     if (url) a.href = url;
   });
 
-  // Botón de descargar la app de Whop según el celular
-  const ua = navigator.userAgent;
-  const ios = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-  const urlApp = ios ? F.urlAppIOS : /Android/.test(ua) ? F.urlAppAndroid : '';
-  document.querySelectorAll('[data-app]').forEach((a) => {
-    if (!urlApp) return;
-    a.href = urlApp;
-    a.target = '_blank';
-    a.rel = 'noopener';
-    a.hidden = false;
-  });
-
   // Aparecer al hacer scroll
   const revelar = document.querySelectorAll('.revelar');
   if ('IntersectionObserver' in window) {
