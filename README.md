@@ -8,12 +8,20 @@ Funnel de tres páginas con el estilo de la Biblioteca @itskeo5 (`docs/ESTILO.md
 
 Los IDs de plan y los links están todos en **`config.js`**. Para probar sin cobrar, cambia `entorno` a `'sandbox'` (con planes de sandbox).
 
-## Publicar
+## Publicar en Whop
 
-Son archivos estáticos: sirven tal cual en Cloudflare Pages/Workers, Netlify, Vercel o cualquier hosting. Para probar local:
+El proyecto de Whop (`whop apps init --app_type website`) es TanStack Start. Las páginas van en `public/` y la ruta `/` redirige a `/inicio.html` (`whop/index.tsx`). Para copiar todo:
+
+```powershell
+cd K:\automatizacion\funnel
+git pull
+.\copiar-a-whop.ps1
+cd ..\funnel-itskeo
+whop apps deploy
+```
+
+## Probar en local
 
 ```sh
 python3 -m http.server 8000
 ```
-
-Y abre http://localhost:8000.
