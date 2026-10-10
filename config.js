@@ -11,7 +11,7 @@ window.FUNNEL = {
   urlComunidadPlus: 'https://whop.com/itskeo/exp_IBUci0sjUP2q1Z/app/', // después de comprar Plus
 
   // Login de Whop: para quien ya se unió (no volver a pasar por el checkout)
-  urlLogin: 'https://whop.com/login/',
+  urlLogin: 'https://whop.com/login/?next=/itskeo/',
 
   urlTiktok: 'https://www.tiktok.com/@itskeo5',
 
