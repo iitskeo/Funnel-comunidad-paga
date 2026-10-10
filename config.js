@@ -8,7 +8,7 @@ window.FUNNEL = {
 
   // A dónde va la gente después de cada paso
   urlBiblioteca: 'https://whop.com/itskeo/exp_MoZZITX3DvCwNH/app/',
-  urlComunidadPlus: 'https://whop.com/itskeo/comunidad-plus/',
+  urlComunidadPlus: 'https://whop.com/itskeo/exp_IBUci0sjUP2q1Z/app/',
 
   urlTiktok: 'https://www.tiktok.com/@itskeo5',
 
