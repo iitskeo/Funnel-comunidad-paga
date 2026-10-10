@@ -1,7 +1,7 @@
 # Copia el funnel al proyecto de Whop (TanStack Start) y lo deja listo para "whop apps deploy".
-# Uso, desde esta carpeta:  .\copiar-a-whop.ps1            (destino por defecto: ..\funnel-itskeo)
+# Uso, desde esta carpeta:  .\copiar-a-whop.ps1            (destino por defecto: .\itskeo1)
 #                           .\copiar-a-whop.ps1 -Destino K:\ruta\al\proyecto
-param([string]$Destino = (Join-Path $PSScriptRoot '..\funnel-itskeo'))
+param([string]$Destino = (Join-Path $PSScriptRoot 'itskeo1'))
 
 $ErrorActionPreference = 'Stop'
 $origen = $PSScriptRoot

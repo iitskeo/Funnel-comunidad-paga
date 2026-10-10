@@ -16,7 +16,7 @@ El proyecto de Whop (`whop apps init --app_type website`) es TanStack Start. Las
 cd K:\automatizacion\funnel
 git pull
 .\copiar-a-whop.ps1
-cd ..\funnel-itskeo
+cd itskeo1
 whop apps deploy
 ```
 
