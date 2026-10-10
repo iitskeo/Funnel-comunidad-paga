@@ -241,6 +241,10 @@ main {
   .solo-movil {
     display: none;
   }
+  /* En escritorio el checkout está al lado: la flecha hacia abajo no aplica */
+  .upsell .heroe__acciones .btn--primario .icon {
+    display: none;
+  }
 }
 .upsell__texto {
   display: grid;
@@ -339,4 +343,7 @@ main {
 }
 .centro .app-aviso {
   max-width: 440px;
+}
+.upsell .heroe__acciones .btn--grande {
+  height: 60px;
 }
