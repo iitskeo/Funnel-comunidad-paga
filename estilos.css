@@ -262,3 +262,23 @@ main {
 .llevas .lista {
   margin-top: 16px;
 }
+
+/* Salida gratis: visible, pero sin competir con el botón de Plus */
+.btn--gratis {
+  border-width: 2px;
+  border-color: color-mix(in oklab, var(--accent) 55%, var(--line));
+  font-weight: 600;
+}
+.btn--grande.btn--gratis {
+  height: 60px;
+  padding-inline: 30px;
+  font-size: 1.0625rem;
+}
+@media (max-width: 480px) {
+  .btn--grande.btn--gratis {
+    width: 100%;
+  }
+  .heroe__acciones .btn--grande {
+    width: 100%;
+  }
+}
