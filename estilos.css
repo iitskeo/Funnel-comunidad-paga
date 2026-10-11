@@ -362,3 +362,7 @@ main {
 .upsell .llevas {
   margin-top: 88px;
 }
+.nota-login {
+  flex-basis: 100%;
+  margin-top: -4px;
+}
