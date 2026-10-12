@@ -13,31 +13,6 @@
     if (url) a.href = url;
   });
 
-  // Dentro del navegador de TikTok / Instagram / Facebook la sesión de Whop no
-  // se guarda. Mostramos un aviso con un link que intenta abrir el navegador.
-  const ua = navigator.userAgent;
-  const enApp = /musical_ly|Bytedance|TikTok|trill|Instagram|FBAN|FBAV|FB_IAB/i.test(ua);
-  const avisoApp = document.querySelector('[data-salir-app]');
-  if (enApp && avisoApp) {
-    const url = location.href;
-    const android = /Android/i.test(ua);
-    const ios = /iPhone|iPad|iPod/i.test(ua);
-    let salida = '';
-    if (android) {
-      salida = 'intent://' + url.replace(/^https?:\/\//, '') +
-        '#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=' +
-        encodeURIComponent(url) + ';end';
-    } else if (ios) {
-      salida = 'x-safari-' + url;
-    }
-    const nombre = /Instagram/i.test(ua) ? 'Instagram' : /FBAN|FBAV|FB_IAB/i.test(ua) ? 'Facebook' : 'TikTok';
-    avisoApp.querySelector('strong').textContent = 'Estás dentro de ' + nombre + '.';
-    const link = avisoApp.querySelector('[data-salir-link]');
-    if (salida) link.href = salida;
-    else link.hidden = true;
-    avisoApp.hidden = false;
-  }
-
   // En escritorio algunos botones bajan a otro punto (ej. el checkout completo)
   document.querySelectorAll('[data-escritorio]').forEach((a) => {
     a.addEventListener('click', (e) => {

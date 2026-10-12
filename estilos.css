@@ -366,23 +366,3 @@ main {
   flex-basis: 100%;
   margin-top: -4px;
 }
-
-/* Aviso para salir del navegador de TikTok / Instagram */
-.salir-app {
-  display: grid;
-  gap: 10px;
-  width: 100%;
-  padding: 16px;
-  border-radius: var(--radius-sm);
-  border: 2px solid color-mix(in oklab, var(--accent) 60%, var(--line));
-  background: var(--bg-2);
-  font-size: 0.9375rem;
-  color: var(--muted);
-}
-.salir-app strong {
-  color: var(--text);
-  font-weight: 600;
-}
-.salir-app .btn {
-  width: 100%;
-}
