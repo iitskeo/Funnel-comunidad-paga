@@ -1,10 +1,9 @@
 # Funnel Comunidad Plus
 
-Funnel de tres páginas con el estilo de la Biblioteca @itskeo5 (`docs/ESTILO.md`, `tokens.css`).
+Landing de una sola página con el estilo de la Biblioteca @itskeo5 (`docs/ESTILO.md`, `tokens.css`).
 
-1. **`index.html`**: landing de la biblioteca de prompts gratis, con el checkout de Whop embebido (`planBiblioteca`).
-2. **`gracias.html`**: confirma el acceso gratis y ofrece Comunidad Plus a 5 USD al mes (`planPlus`), con el botón "No gracias, ir a la biblioteca".
-3. **`bienvenido.html`**: gracias por apoyar, y redirige a la comunidad Plus en Whop a los 6 segundos.
+- **`index.html`**: muestra la biblioteca gratis y Comunidad Plus. Cada botón va al checkout link de Whop (`whop.com/checkout/plan_...`), así la persona pone su correo una vez y termina dentro de Whop con la sesión abierta.
+- `gracias.html` y `bienvenido.html` son del funnel anterior (checkout embebido) y ya no están en el recorrido.
 
 Los IDs de plan y los links están todos en **`config.js`**. Para probar sin cobrar, cambia `entorno` a `'sandbox'` (con planes de sandbox).
 
