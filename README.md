@@ -24,3 +24,7 @@ whop apps deploy
 ```sh
 python3 -m http.server 8000
 ```
+
+## Para continuar el trabajo
+
+Lee `HANDOFF.md`: estado actual, decisiones, comandos para publicar y pendientes.
