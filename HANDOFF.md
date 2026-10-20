@@ -127,7 +127,9 @@ Otros pendientes menores:
 - Decidir si se borran `gracias.html`, `bienvenido.html`, `config.js`, `app.js`, `estilos.css`.
 - Si Plus va a prometer "lo que no comparto en ningún otro lado", "lo nuevo te llega primero" y "tutoriales paso a paso de cada video", el usuario debe cumplirlo. Se le avisó.
 - Ofreció (sin decidir) frase de "precio de fundador": "quien entra ahora se queda en 5 USD para siempre". Solo si de verdad sube el precio después.
-- Decidimos NO poner "precio limitado" ni escasez falsa.
+- **Oferta con fecha límite (decidida el 20 oct 2026, es real):** quien entra a Plus antes del **1 de noviembre, 12:00 (hora de Colombia, UTC-5)** se queda en 5 USD/mes para siempre; después el precio sube a **12.99 USD** (no 14.99). Quien ya es miembro de Plus conserva 5 USD. En `index.html`: recuadro con texto + contador en la tarjeta de Plus; la fecha es la constante `FIN` del script al final. Pasada la fecha el script oculta el contador y muestra "12.99 USD /mes". Los checkout links no se tocaron.
+- **Ojo:** la página solo muestra el precio, no lo cambia. El 1 de noviembre hay que subir el precio del plan en Whop (o crear un plan nuevo y cambiar el link), si no seguirá cobrando 5 USD. El contador usa el reloj del dispositivo.
+- Nada de escasez falsa fuera de esa fecha.
 
 ## 8. Decisiones de producto y copy (el usuario las pidió, respétalas)
 

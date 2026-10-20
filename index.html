@@ -627,6 +627,39 @@ mark {
 }
 .ya a { color: var(--text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .btn--gratis.nav-btn { height: 44px; padding-inline: 18px; }
+
+/* Oferta con fecha límite: precio de 5 USD para siempre hasta el 1 de noviembre */
+.oferta {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  background: color-mix(in oklab, var(--accent) 12%, var(--bg-2));
+}
+.oferta__texto { font-size: 0.9375rem; line-height: 1.45; color: var(--muted); }
+.oferta__texto strong { color: var(--text); font-weight: 600; }
+.cuenta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+.cuenta > div {
+  display: grid;
+  justify-items: center;
+  padding: 6px 4px;
+  border-radius: 10px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+}
+.cuenta b {
+  font-family: var(--display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.cuenta span { font-size: 0.6875rem; color: var(--muted); }
   </style>
 </head>
 <body>
@@ -673,7 +706,16 @@ mark {
         <span class="chip">Exclusivo</span>
         <div class="opcion__fila">
           <h2 id="t-plus">Comunidad Plus</h2>
-          <p class="precio"><strong>5 USD</strong> <span>/mes</span></p>
+          <p class="precio" id="precio-plus"><strong>5 USD</strong> <span>/mes</span></p>
+        </div>
+        <div class="oferta" id="oferta">
+          <p class="oferta__texto"><strong>Entra antes del 1 de noviembre y te quedas en 5 USD al mes para siempre.</strong> Después sube a 12.99 USD.</p>
+          <div class="cuenta" role="timer" aria-label="Tiempo que queda para el precio de 5 USD">
+            <div><b data-d>--</b><span>días</span></div>
+            <div><b data-h>--</b><span>horas</span></div>
+            <div><b data-m>--</b><span>min</span></div>
+            <div><b data-s>--</b><span>seg</span></div>
+          </div>
         </div>
         <ul class="puntos">
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Mis skills, listos para instalar y usar</li>
@@ -682,11 +724,47 @@ mark {
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Todo lo de la biblioteca, incluido</li>
         </ul>
         <a class="btn btn--primario btn--grande" href="https://whop.com/checkout/plan_RhVl5CaluBGH1">Unirme a Plus <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
-        <p class="micro">Cancelas cuando quieras.</p>
+        <p class="micro">Cancelas cuando quieras. Si ya eres parte de Plus, tu precio nunca cambia.</p>
       </section>
     </div>
 
     <p class="porque entrar" style="--retraso:.24s"><strong>Plus es el proceso completo.</strong> En TikTok ves el resultado; en Plus te llevas las herramientas y los pasos para hacerlo tú.</p>
   </main>
+
+  <script>
+  // Fecha límite del precio de 5 USD: 1 de noviembre, 12:00 (hora de Colombia, UTC-5).
+  // Para cambiarla, edita solo esta línea.
+  (function () {
+    var FIN = new Date('2026-11-01T12:00:00-05:00').getTime();
+    var oferta = document.getElementById('oferta');
+    var precio = document.getElementById('precio-plus');
+    var d = oferta.querySelector('[data-d]');
+    var h = oferta.querySelector('[data-h]');
+    var m = oferta.querySelector('[data-m]');
+    var s = oferta.querySelector('[data-s]');
+    function dos(n) { return n < 10 ? '0' + n : String(n); }
+
+    // Pasada la fecha: sin contador y con el precio nuevo.
+    function cerrar() {
+      oferta.hidden = true;
+      precio.innerHTML = '<strong>12.99 USD</strong> <span>/mes</span>';
+    }
+
+    function tick() {
+      var ms = FIN - Date.now();
+      if (ms <= 0) { cerrar(); return false; }
+      var t = Math.floor(ms / 1000);
+      d.textContent = dos(Math.floor(t / 86400));
+      h.textContent = dos(Math.floor(t % 86400 / 3600));
+      m.textContent = dos(Math.floor(t % 3600 / 60));
+      s.textContent = dos(t % 60);
+      return true;
+    }
+
+    if (tick()) {
+      var reloj = setInterval(function () { if (!tick()) clearInterval(reloj); }, 1000);
+    }
+  })();
+  </script>
 </body>
 </html>
