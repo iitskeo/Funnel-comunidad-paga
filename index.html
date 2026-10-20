@@ -678,14 +678,19 @@ mark {
 
   <main class="wrap pagina">
     <p class="ya entrar">¿Ya te uniste antes? <a href="https://whop.com/login/?next=/itskeo/">Inicia sesión</a> y entras a todo.</p>
-    <div class="app-aviso entrar">
-      <svg class="icon" aria-hidden="true"><use href="#i-movil"/></svg>
-      <p><strong>Descarga la app de Whop</strong> e inicia sesión con el mismo correo para no perderte nada.</p>
-    </div>
 
     <div class="cabeza entrar" style="--retraso:.06s">
       <h1 class="titulo-heroe">Mi comunidad de IA. <span>Gratis o con Plus.</span></h1>
-      <p class="lead">Los prompts de todos mis videos, gratis. Y en Plus, lo que no comparto en ningún otro lado.</p>
+    </div>
+
+    <div class="oferta entrar" id="oferta" style="--retraso:.1s">
+      <p class="oferta__texto"><strong>Si te unes a Plus antes del 1 de noviembre, te quedas en 5 USD al mes para siempre.</strong> Después sube a 12.99 USD.</p>
+      <div class="cuenta" role="timer" aria-label="Tiempo que queda para el precio de 5 USD">
+        <div><b data-d>--</b><span>días</span></div>
+        <div><b data-h>--</b><span>horas</span></div>
+        <div><b data-m>--</b><span>min</span></div>
+        <div><b data-s>--</b><span>seg</span></div>
+      </div>
     </div>
 
     <div class="opciones">
@@ -708,19 +713,11 @@ mark {
           <h2 id="t-plus">Comunidad Plus</h2>
           <p class="precio" id="precio-plus"><strong>5 USD</strong> <span>/mes</span></p>
         </div>
-        <div class="oferta" id="oferta">
-          <p class="oferta__texto"><strong>Si entras antes del 1 de noviembre, te quedas en 5 USD al mes para siempre.</strong> Después sube a 12.99 USD.</p>
-          <div class="cuenta" role="timer" aria-label="Tiempo que queda para el precio de 5 USD">
-            <div><b data-d>--</b><span>días</span></div>
-            <div><b data-h>--</b><span>horas</span></div>
-            <div><b data-m>--</b><span>min</span></div>
-            <div><b data-s>--</b><span>seg</span></div>
-          </div>
-        </div>
         <ul class="puntos">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>MCP de Motionabi: crea videos con Claude</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Mis skills, listos para instalar y usar</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Tutoriales paso a paso de cada video</li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Lo nuevo te llega primero, apenas sale</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Cosas nuevas cada semana, te llegan primero</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Todo lo de la biblioteca, incluido</li>
         </ul>
         <a class="btn btn--primario btn--grande" href="https://whop.com/checkout/plan_RhVl5CaluBGH1">Unirme a Plus <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
@@ -728,7 +725,10 @@ mark {
       </section>
     </div>
 
-    <p class="porque entrar" style="--retraso:.24s"><strong>Plus es el proceso completo.</strong> En TikTok ves el resultado; en Plus te llevas las herramientas y los pasos para hacerlo tú.</p>
+    <div class="app-aviso">
+      <svg class="icon" aria-hidden="true"><use href="#i-movil"/></svg>
+      <p><strong>Descarga la app de Whop</strong> e inicia sesión con el mismo correo para no perderte nada.</p>
+    </div>
   </main>
 
   <script>
