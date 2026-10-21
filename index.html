@@ -678,39 +678,6 @@ mark {
 }
 .cuenta span { font-size: 0.6875rem; color: var(--muted); }
 
-/* Barra fija abajo: Plus siempre a la vista hasta que se ve su tarjeta */
-.pagina { padding-bottom: 96px; }
-.barra {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 20;
-  padding-block: 10px calc(10px + env(safe-area-inset-bottom));
-  background: color-mix(in oklab, var(--bg) 88%, transparent);
-  backdrop-filter: blur(14px) saturate(140%);
-  -webkit-backdrop-filter: blur(14px) saturate(140%);
-  border-top: 1px solid color-mix(in oklab, var(--line) 70%, transparent);
-  transition: transform 300ms var(--ease-out), visibility 0s;
-}
-@media (prefers-reduced-transparency: reduce) {
-  .barra { background: var(--bg); backdrop-filter: none; -webkit-backdrop-filter: none; }
-}
-.barra.oculta {
-  transform: translateY(100%);
-  visibility: hidden;
-  transition: transform 300ms var(--ease-out), visibility 0s 300ms;
-}
-.barra__fila {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-.barra__texto { display: grid; line-height: 1.2; }
-.barra__texto strong { font-family: var(--display); font-size: 1.125rem; letter-spacing: -0.02em; }
-.barra__texto span { font-size: 0.8125rem; color: var(--muted); }
-.barra .btn { height: 46px; }
   </style>
 </head>
 <body>
@@ -732,16 +699,6 @@ mark {
 
     <div class="cabeza entrar" style="--retraso:.06s">
       <h1 class="titulo-heroe">Mi comunidad de IA. <span>Gratis o con Plus.</span></h1>
-    </div>
-
-    <div class="oferta entrar" id="oferta" style="--retraso:.1s">
-      <p class="oferta__texto"><strong>Si te unes a Plus antes del 1 de noviembre, te quedas en 5 USD al mes para siempre.</strong> Después sube a 12.99 USD.</p>
-      <div class="cuenta" role="timer" aria-label="Tiempo que queda para el precio de 5 USD">
-        <div><b data-d>--</b><span>días</span></div>
-        <div><b data-h>--</b><span>horas</span></div>
-        <div><b data-m>--</b><span>min</span></div>
-        <div><b data-s>--</b><span>seg</span></div>
-      </div>
     </div>
 
     <div class="opciones">
@@ -772,6 +729,15 @@ mark {
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Cosas nuevas cada semana, te llegan primero</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Todo lo de la comunidad gratis, incluido</li>
         </ul>
+        <div class="oferta" id="oferta">
+          <p class="oferta__texto"><strong>Si te unes antes del 1 de noviembre, 5 USD para siempre.</strong> Después, 12.99 USD.</p>
+          <div class="cuenta" role="timer" aria-label="Tiempo que queda para el precio de 5 USD">
+            <div><b data-d>--</b><span>días</span></div>
+            <div><b data-h>--</b><span>horas</span></div>
+            <div><b data-m>--</b><span>min</span></div>
+            <div><b data-s>--</b><span>seg</span></div>
+          </div>
+        </div>
         <a class="btn btn--primario btn--grande" href="https://whop.com/checkout/plan_RhVl5CaluBGH1">Unirme a Plus <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
         <p class="micro">Cancelas cuando quieras. Si ya eres parte de Plus, tu precio nunca cambia.</p>
       </section>
@@ -782,13 +748,6 @@ mark {
       <p><strong>Descarga la app de Whop</strong> e inicia sesión con el mismo correo para no perderte nada.</p>
     </div>
   </main>
-
-  <div class="barra oculta" id="barra">
-    <div class="wrap barra__fila">
-      <p class="barra__texto"><strong id="barra-precio">5 USD /mes</strong><span>Comunidad Plus</span></p>
-      <a class="btn btn--primario" href="https://whop.com/checkout/plan_RhVl5CaluBGH1">Unirme a Plus <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
-    </div>
-  </div>
 
   <script>
   // Fecha límite del precio de 5 USD: 1 de noviembre, 12:00 (hora de Colombia, UTC-5).
@@ -807,7 +766,6 @@ mark {
     function cerrar() {
       oferta.hidden = true;
       precio.innerHTML = '<strong>12.99 USD</strong> <span>/mes</span>';
-      document.getElementById('barra-precio').textContent = '12.99 USD /mes';
     }
 
     function tick() {
@@ -826,15 +784,6 @@ mark {
     }
   })();
 
-  // La barra de abajo solo se ve mientras el botón de Plus de la tarjeta no está en pantalla.
-  (function () {
-    var barra = document.getElementById('barra');
-    var boton = document.querySelector('.opcion--plus .btn--primario');
-    if (!('IntersectionObserver' in window)) { barra.classList.remove('oculta'); return; }
-    new IntersectionObserver(function (e) {
-      barra.classList.toggle('oculta', e[0].isIntersecting);
-    }, { threshold: 1 }).observe(boton);
-  })();
   </script>
 </body>
 </html>
