@@ -606,6 +606,23 @@ mark {
 }
 .puntos li { display: flex; align-items: start; gap: 10px; }
 .puntos .icon { margin-top: 4px; color: var(--accent); }
+.opcion--plus {
+  box-shadow: 0 0 0 5px color-mix(in oklab, var(--accent) 14%, transparent), 0 24px 48px -28px color-mix(in oklab, var(--accent) 55%, transparent);
+}
+.plus-sub { font-size: 0.9375rem; color: var(--muted); margin-top: -4px; }
+.nuevo {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  vertical-align: 1px;
+}
 .opcion .btn { width: 100%; }
 .opcion .btn--grande { height: 52px; }
 .btn--gratis {
@@ -713,12 +730,13 @@ mark {
           <h2 id="t-plus">Comunidad Plus</h2>
           <p class="precio" id="precio-plus"><strong>5 USD</strong> <span>/mes</span></p>
         </div>
+        <p class="plus-sub">Todo lo que uso para crear mis videos de IA.</p>
         <ul class="puntos">
-          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>MCP de Motionabi: crea videos con Claude</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><b class="nuevo">Nuevo</b> MCP de Motionabi: crea videos con Claude</span></li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Mis skills, listos para instalar y usar</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Tutoriales paso a paso de cada video</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Cosas nuevas cada semana, te llegan primero</li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Todo lo de la biblioteca, incluido</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Todo lo de la comunidad gratis, incluido</li>
         </ul>
         <a class="btn btn--primario btn--grande" href="https://whop.com/checkout/plan_RhVl5CaluBGH1">Unirme a Plus <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
         <p class="micro">Cancelas cuando quieras. Si ya eres parte de Plus, tu precio nunca cambia.</p>
