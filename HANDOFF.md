@@ -130,6 +130,7 @@ Otros pendientes menores:
 - **Oferta con fecha límite (decidida el 20 oct 2026, es real):** quien entra a Plus antes del **1 de noviembre, 12:00 (hora de Colombia, UTC-5)** se queda en 5 USD/mes para siempre; después el precio sube a **12.99 USD** (no 14.99). Quien ya es miembro de Plus conserva 5 USD. En `index.html`: recuadro con texto + contador dentro de la tarjeta de Plus, encima del botón; la fecha es la constante `FIN` del script al final. Pasada la fecha el script oculta el contador y muestra "12.99 USD /mes". Los checkout links no se tocaron.
 - **Ojo:** la página solo muestra el precio, no lo cambia. El 1 de noviembre hay que subir el precio del plan en Whop (o crear un plan nuevo y cambiar el link), si no seguirá cobrando 5 USD. El contador usa el reloj del dispositivo.
 - Nada de escasez falsa fuera de esa fecha.
+- Etiqueta de la tarjeta Plus: "Tiempo limitado", montada sobre el borde de arriba (21 oct 2026). Pasada la fecha el script la cambia a "Exclusivo". Se quitó la frase "Todo lo que uso para crear mis videos de IA." para acortar la tarjeta.
 - Se probó una barra fija abajo con "Unirme a Plus" y el usuario pidió **quitarla** (21 oct 2026). No la repongas sin que lo pida. El banner de la oferta con contador va **dentro de la tarjeta de Plus, justo encima del botón**, con el texto corto "Si te unes antes del 1 de noviembre, 5 USD para siempre. Después, 12.99 USD."
 
 ## 8. Decisiones de producto y copy (el usuario las pidió, respétalas)

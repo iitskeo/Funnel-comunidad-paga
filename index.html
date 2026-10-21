@@ -609,7 +609,16 @@ mark {
 .opcion--plus {
   box-shadow: 0 0 0 5px color-mix(in oklab, var(--accent) 14%, transparent), 0 24px 48px -28px color-mix(in oklab, var(--accent) 55%, transparent);
 }
-.plus-sub { font-size: 0.9375rem; color: var(--muted); margin-top: -4px; }
+.opcion--plus { position: relative; margin-top: 10px; }
+.opcion .chip.chip--borde {
+  position: absolute;
+  top: -14px;
+  left: 16px;
+  padding: 3px 12px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 700;
+}
 .nuevo {
   display: inline-block;
   margin-right: 6px;
@@ -714,12 +723,11 @@ mark {
       </section>
 
       <section class="opcion opcion--plus entrar" style="--retraso:.18s" aria-labelledby="t-plus">
-        <span class="chip">Exclusivo</span>
+        <span class="chip chip--borde" id="chip-plus">Tiempo limitado</span>
         <div class="opcion__fila">
           <h2 id="t-plus">Comunidad Plus</h2>
           <p class="precio" id="precio-plus"><strong>5 USD</strong> <span>/mes</span></p>
         </div>
-        <p class="plus-sub">Todo lo que uso para crear mis videos de IA.</p>
         <ul class="puntos">
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><b class="nuevo">Nuevo</b> MCP de Motionabi: crea videos con Claude</span></li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Mis skills, listos para instalar y usar</li>
@@ -737,7 +745,7 @@ mark {
           </div>
         </div>
         <a class="btn btn--primario btn--grande" href="https://whop.com/checkout/plan_RhVl5CaluBGH1">Unirme a Plus <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
-        <p class="micro">Cancelas cuando quieras. Si ya eres parte de Plus, tu precio nunca cambia.</p>
+        <p class="micro">Cancelas cuando quieras. Si ya eres de Plus, tu precio no cambia.</p>
       </section>
     </div>
 
@@ -764,6 +772,7 @@ mark {
     function cerrar() {
       oferta.hidden = true;
       precio.innerHTML = '<strong>12.99 USD</strong> <span>/mes</span>';
+      document.getElementById('chip-plus').textContent = 'Exclusivo';
     }
 
     function tick() {
