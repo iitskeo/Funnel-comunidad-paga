@@ -140,7 +140,7 @@ Otros pendientes menores:
 - Botones con textos de acción, siempre los mismos: "Unirme gratis", "Unirme a Plus", "Iniciar sesión".
 - "¿Ya te uniste antes? Inicia sesión" va arriba, antes del banner de la app.
 - Banner de la app de Whop: desde el 20 oct 2026 va **al final** de la página (antes estaba arriba). Es texto, **sin botón de descarga** (el botón no funcionaba y se quitó).
-- Diseño simplificado (20 oct 2026, a pedido del usuario): sin párrafo bajo el título ni párrafo final "Plus es el proceso completo". Orden: "¿Ya te uniste antes?", tarjeta gratis (el título "Mi comunidad de IA. Gratis o con Plus." se quitó el 21 oct 2026 a pedido del usuario para subir las tarjetas; sigue en el HTML como `sr-only` por accesibilidad), tarjeta Plus (con la oferta y el contador encima del botón), banner de la app. Plus incluye "MCP de Motionabi: crea videos con Claude" (se escribe Motionabi) y "Cosas nuevas cada semana".
+- Diseño simplificado (20 oct 2026, a pedido del usuario): sin párrafo final "Plus es el proceso completo". Orden: "¿Ya te uniste antes?", título "Mi comunidad de IA. Gratis o con Plus." con su frase de abajo (se quitó el 21 oct y el 22 oct 2026 el usuario pidió **devolverlos**, porque cree que el funnel anterior convertía más),  tarjeta gratis, tarjeta Plus (con la oferta y el contador encima del botón), banner de la app. Plus incluye "MCP de Motionabi: crea videos con Claude" (se escribe Motionabi) y "Cosas nuevas cada semana".
 - Se probó y se **revirtió** un aviso para salir del navegador de TikTok (`intent://` y `x-safari-`). No lo repongas sin que lo pida.
 - Voz: primera persona, cercana, frases cortas. **Nunca guion largo (—) ni medio (–)**: usar punto, coma o dos puntos. Sin emojis dentro de la página. Sin palabras vacías ("eleva", "potencia").
 - Estilo: fondo oscuro verdoso, **un solo acento menta** (`#72e4b0`), títulos Bricolage Grotesque, texto Geist, botones píldora, sin degradados ni segundo color.
@@ -183,3 +183,5 @@ Los checkouts de Whop no se ven en las capturas (el script de Whop no carga desd
 - Quiere ver el resultado, no el proceso. Muéstrale capturas o manda el HTML con `SendUserFile` cuando proponga un diseño.
 - Si algo no se puede confirmar desde aquí, dilo claro y dile qué probar.
 - Antes de operaciones externas (publicar, borrar) pregunta; para código dentro de la rama de trabajo, avanza.
+
+- Tarjeta gratis: el 22 oct 2026 volvió a llamarse **"Biblioteca de prompts"** (por unos días fue "Comunidad"); sus puntos siguen siendo "El prompt exacto de cada video" y "Acceso a recursos".
