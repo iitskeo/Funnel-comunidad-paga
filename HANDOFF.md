@@ -185,3 +185,5 @@ Los checkouts de Whop no se ven en las capturas (el script de Whop no carga desd
 - Antes de operaciones externas (publicar, borrar) pregunta; para código dentro de la rama de trabajo, avanza.
 
 - Tarjeta gratis: el 22 oct 2026 volvió a llamarse **"Biblioteca de prompts"** (por unos días fue "Comunidad"); sus puntos siguen siendo "El prompt exacto de cada video" y "Acceso a recursos".
+
+- **Banner de la oferta, versión final (24 oct 2026):** dentro de la tarjeta de Plus, encima del botón, dos filas: **HOY · 5 USD/mes para siempre** (resaltada en amarillo, con "Quedan 07d 20h 24m 42s" en vivo) y **DESDE EL 1 DE NOV · 12.99 USD/mes** (apagada). Se probaron y descartaron: caja oscura con cuatro números, color verde/naranja/coral/blanco, cinta, marcador gigante, barra de progreso. El usuario dijo que un contador solo no explica **para qué** se acaba el tiempo, por eso va el antes y el después. El amarillo (`--aviso`, con versión más oscura en modo claro) es una **excepción deliberada** a la regla de "un solo acento menta" y solo se usa en este bloque. El resto de las menciones al banner con contador en cajas que aparecen arriba quedaron obsoletas.

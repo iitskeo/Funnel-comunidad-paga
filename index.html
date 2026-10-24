@@ -27,6 +27,8 @@
   --accent: #72e4b0;
   --on-accent: #03170d;
   --error: #f2777a;
+  --aviso: #ffd23f; /* solo para la oferta con fecha límite */
+  --aviso-texto: #ffd23f;
   --media-shadow: 0 40px 80px -40px rgb(0 0 0 / 0.85);
 
   /* Tipografía */
@@ -62,6 +64,8 @@
     --accent: #23935f; /* más oscuro para que se distinga sobre fondo claro */
     --on-accent: #03170d;
     --media-shadow: 0 40px 70px -40px rgb(15 45 30 / 0.4);
+    --aviso: #e0a800;
+    --aviso-texto: #8a5d00; /* más oscuro para que se lea sobre fondo claro */
   }
 }
 
@@ -654,55 +658,38 @@ mark {
 .ya a { color: var(--text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .btn--gratis.nav-btn { height: 44px; padding-inline: 18px; }
 
-/* Oferta con fecha límite: precio de 5 USD para siempre hasta el 1 de noviembre */
-.oferta {
+/* Oferta con fecha límite: hoy 5 USD para siempre, desde el 1 de noviembre 12.99 USD */
+.oferta { display: grid; gap: 8px; }
+.of-fila {
   display: grid;
-  gap: 12px;
-  padding: 14px;
-  border-radius: var(--radius-sm);
-  background: var(--accent);
-  color: var(--on-accent);
-}
-.oferta__texto { font-size: 1rem; line-height: 1.4; color: var(--on-accent); }
-.oferta__texto strong { font-weight: 700; }
-.cuenta {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 10px 6px 8px;
+  grid-template-columns: auto 1fr;
+  gap: 2px 12px;
+  align-items: center;
+  padding: 10px 12px;
   border-radius: 12px;
-  background: var(--on-accent);
+  border: 1px solid var(--line);
+  color: var(--muted);
 }
-.cuenta > div {
-  position: relative;
-  display: grid;
-  justify-items: center;
+.of-fila--hoy {
+  border: 2px solid var(--aviso);
+  background: color-mix(in oklab, var(--aviso) 12%, var(--bg-2));
+  color: var(--text);
 }
-/* Los dos puntos entre número y número: se lee como un reloj. */
-.cuenta > div:not(:last-child)::after {
-  content: ':';
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: translateX(50%);
-  font-family: var(--display);
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.05;
-  color: color-mix(in oklab, var(--accent) 55%, var(--on-accent));
-}
-.cuenta b {
-  font-family: var(--display);
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  font-variant-numeric: tabular-nums;
-  color: var(--accent);
-}
-.cuenta span {
+.of-e {
+  min-width: 78px;
   font-size: 0.75rem;
-  font-weight: 500;
-  color: color-mix(in oklab, var(--accent) 70%, var(--on-accent));
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.of-p b { font-family: var(--display); font-size: 1.375rem; letter-spacing: -0.02em; }
+.of-fila--hoy .of-p b { color: var(--aviso-texto); }
+.of-q {
+  grid-column: 1 / -1;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--aviso-texto);
+  font-variant-numeric: tabular-nums;
 }
 
   </style>
@@ -757,12 +744,14 @@ mark {
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Todo lo de la comunidad gratis, incluido</li>
         </ul>
         <div class="oferta" id="oferta">
-          <p class="oferta__texto"><strong>Si te unes antes del 1 de noviembre, 5 USD para siempre.</strong> Después, 12.99 USD.</p>
-          <div class="cuenta" role="timer" aria-label="Tiempo que queda para el precio de 5 USD">
-            <div><b data-d>--</b><span>días</span></div>
-            <div><b data-h>--</b><span>horas</span></div>
-            <div><b data-m>--</b><span>min</span></div>
-            <div><b data-s>--</b><span>seg</span></div>
+          <div class="of-fila of-fila--hoy">
+            <span class="of-e">Hoy</span>
+            <span class="of-p"><b>5 USD</b>/mes para siempre</span>
+            <span class="of-q" role="timer" aria-label="Tiempo que queda para el precio de 5 USD">Quedan <span data-d>--</span>d <span data-h>--</span>h <span data-m>--</span>m <span data-s>--</span>s</span>
+          </div>
+          <div class="of-fila">
+            <span class="of-e">Desde el 1 de nov</span>
+            <span class="of-p"><b>12.99 USD</b>/mes</span>
           </div>
         </div>
         <a class="btn btn--primario btn--grande" href="https://whop.com/checkout/plan_RhVl5CaluBGH1">Unirme a Plus <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
