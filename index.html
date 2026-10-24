@@ -658,21 +658,86 @@ mark {
 .ya a { color: var(--text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .btn--gratis.nav-btn { height: 44px; padding-inline: 18px; }
 
-/* Oferta con fecha límite: hoy 5 USD para siempre, desde el 1 de noviembre 12.99 USD */
+/* Oferta con fecha límite: contador grande y, debajo, el precio de hoy y el del 1 de noviembre */
 .oferta { display: grid; gap: 8px; }
+.of-cuenta {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 14px 10px 12px;
+  border: 2px solid var(--aviso);
+  border-radius: 14px;
+  background: color-mix(in oklab, var(--aviso) 12%, var(--bg-2));
+}
+.of-k {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--aviso-texto);
+}
+.pulso {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #e0261b;
+  box-shadow: 0 0 0 4px rgb(224 38 27 / 0.28);
+  vertical-align: 1px;
+  animation: pulso 1.4s ease-in-out infinite;
+}
+@keyframes pulso {
+  50% { box-shadow: 0 0 0 7px rgb(224 38 27 / 0); }
+}
+.ck {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+.ck > div {
+  position: relative;
+  display: grid;
+  justify-items: center;
+}
+.ck b {
+  font-family: var(--display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  color: var(--aviso-texto);
+}
+.ck i { font-style: normal; font-size: 0.75rem; color: var(--muted); }
+/* Los dos puntos entre número y número: se lee como un reloj. */
+.ck > div:not(:last-child)::after {
+  content: ':';
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(50%);
+  font-family: var(--display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--aviso-texto);
+  opacity: 0.55;
+}
+.of-dos { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .of-fila {
   display: grid;
   justify-items: center;
   gap: 2px;
-  text-align: center;
-  padding: 10px 12px;
+  padding: 8px;
   border-radius: 12px;
   border: 1px solid var(--line);
+  text-align: center;
   color: var(--muted);
 }
 .of-fila--hoy {
   border: 2px solid var(--aviso);
-  background: color-mix(in oklab, var(--aviso) 12%, var(--bg-2));
   color: var(--text);
 }
 .of-e {
@@ -681,14 +746,9 @@ mark {
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-.of-p b { font-family: var(--display); font-size: 1.375rem; letter-spacing: -0.02em; }
-.of-fila--hoy .of-p b { color: var(--aviso-texto); font-size: 1.75rem; }
-.of-q {
-  font-size: 0.9375rem;
-  font-weight: 700;
-  color: var(--aviso-texto);
-  font-variant-numeric: tabular-nums;
-}
+.of-p b { font-family: var(--display); font-size: 1.125rem; letter-spacing: -0.02em; }
+.of-fila--hoy .of-p b { color: var(--aviso-texto); }
+.of-pie { font-size: 0.8125rem; color: var(--muted); text-align: center; }
 
   </style>
 </head>
@@ -742,15 +802,20 @@ mark {
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Todo lo de la comunidad gratis, incluido</li>
         </ul>
         <div class="oferta" id="oferta">
-          <div class="of-fila of-fila--hoy">
-            <span class="of-e">Hoy</span>
-            <span class="of-p"><b>5 USD</b>/mes para siempre</span>
-            <span class="of-q" role="timer" aria-label="Tiempo que queda para el precio de 5 USD">Quedan <span data-d>--</span>d <span data-h>--</span>h <span data-m>--</span>m <span data-s>--</span>s</span>
+          <div class="of-cuenta" role="timer" aria-label="Tiempo que queda para el precio de 5 USD">
+            <span class="of-k"><i class="pulso"></i>El precio de 5 USD termina en</span>
+            <div class="ck">
+              <div><b data-d>--</b><i>días</i></div>
+              <div><b data-h>--</b><i>horas</i></div>
+              <div><b data-m>--</b><i>min</i></div>
+              <div><b data-s>--</b><i>seg</i></div>
+            </div>
           </div>
-          <div class="of-fila">
-            <span class="of-e">Desde el 1 de nov</span>
-            <span class="of-p"><b>12.99 USD</b>/mes</span>
+          <div class="of-dos">
+            <div class="of-fila of-fila--hoy"><span class="of-e">Hoy</span><span class="of-p"><b>5 USD</b>/mes</span></div>
+            <div class="of-fila"><span class="of-e">Desde 1 nov</span><span class="of-p"><b>12.99 USD</b>/mes</span></div>
           </div>
+          <p class="of-pie">Quien entra antes se queda en 5 USD para siempre.</p>
         </div>
         <a class="btn btn--primario btn--grande" href="https://whop.com/checkout/plan_RhVl5CaluBGH1">Unirme a Plus <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
         <p class="micro">Cancelas cuando quieras. Si ya eres de Plus, tu precio no cambia.</p>
