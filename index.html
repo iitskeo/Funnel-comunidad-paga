@@ -668,14 +668,27 @@ mark {
 .cuenta {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
-}
-.cuenta > div {
-  display: grid;
-  justify-items: center;
-  padding: 8px 4px 6px;
+  padding: 10px 6px 8px;
   border-radius: 12px;
   background: var(--on-accent);
+}
+.cuenta > div {
+  position: relative;
+  display: grid;
+  justify-items: center;
+}
+/* Los dos puntos entre número y número: se lee como un reloj. */
+.cuenta > div:not(:last-child)::after {
+  content: ':';
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(50%);
+  font-family: var(--display);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: color-mix(in oklab, var(--accent) 55%, var(--on-accent));
 }
 .cuenta b {
   font-family: var(--display);
