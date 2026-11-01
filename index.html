@@ -27,8 +27,6 @@
   --accent: #72e4b0;
   --on-accent: #03170d;
   --error: #f2777a;
-  --aviso: #ffd23f; /* solo para la oferta con fecha límite */
-  --aviso-texto: #ffd23f;
   --media-shadow: 0 40px 80px -40px rgb(0 0 0 / 0.85);
 
   /* Tipografía */
@@ -64,8 +62,6 @@
     --accent: #23935f; /* más oscuro para que se distinga sobre fondo claro */
     --on-accent: #03170d;
     --media-shadow: 0 40px 70px -40px rgb(15 45 30 / 0.4);
-    --aviso: #e0a800;
-    --aviso-texto: #8a5d00; /* más oscuro para que se lea sobre fondo claro */
   }
 }
 
@@ -609,6 +605,12 @@ mark {
   white-space: nowrap;
 }
 .precio strong { font-size: 1.625rem; }
+.opcion--plus .precio strong { font-size: 1.4375rem; }
+@media (min-width: 370px) { .opcion h2 { white-space: nowrap; } }
+@media (max-width: 399px) {
+  .opcion--plus h2 { font-size: 1.25rem; }
+  .opcion--plus .precio strong { font-size: 1.3125rem; }
+}
 .precio span { font-size: 0.9375rem; color: var(--muted); font-weight: 500; letter-spacing: 0; }
 .puntos {
   list-style: none;
@@ -646,6 +648,20 @@ mark {
   text-transform: uppercase;
   vertical-align: 1px;
 }
+.pronto {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 0 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  vertical-align: 1px;
+}
 .opcion .btn { width: 100%; }
 .opcion .btn--grande { height: 52px; }
 .btn--gratis {
@@ -668,97 +684,6 @@ mark {
 .ya a { color: var(--text); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .btn--gratis.nav-btn { height: 44px; padding-inline: 18px; }
 
-/* Oferta con fecha límite: contador grande y, debajo, el precio de hoy y el del 1 de noviembre */
-.oferta { display: grid; gap: 8px; }
-.of-cuenta {
-  display: grid;
-  justify-items: center;
-  gap: 8px;
-  padding: 14px 10px 12px;
-  border: 2px solid var(--aviso);
-  border-radius: 14px;
-  background: color-mix(in oklab, var(--aviso) 12%, var(--bg-2));
-}
-.of-k {
-  font-size: 0.8125rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--aviso-texto);
-}
-.pulso {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin-right: 8px;
-  border-radius: 50%;
-  background: #e0261b;
-  box-shadow: 0 0 0 4px rgb(224 38 27 / 0.28);
-  vertical-align: 1px;
-  animation: pulso 1.4s ease-in-out infinite;
-}
-@keyframes pulso {
-  50% { box-shadow: 0 0 0 7px rgb(224 38 27 / 0); }
-}
-.ck {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  width: 100%;
-}
-.ck > div {
-  position: relative;
-  display: grid;
-  justify-items: center;
-}
-.ck b {
-  font-family: var(--display);
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  font-variant-numeric: tabular-nums;
-  color: var(--aviso-texto);
-}
-.ck i { font-style: normal; font-size: 0.75rem; color: var(--muted); }
-/* Los dos puntos entre número y número: se lee como un reloj. */
-.ck > div:not(:last-child)::after {
-  content: ':';
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: translateX(50%);
-  font-family: var(--display);
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--aviso-texto);
-  opacity: 0.55;
-}
-.of-dos { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.of-fila {
-  display: grid;
-  justify-items: center;
-  gap: 2px;
-  padding: 8px;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  text-align: center;
-  color: var(--muted);
-}
-.of-fila--hoy {
-  border: 2px solid var(--aviso);
-  color: var(--text);
-}
-.of-e {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-.of-p b { font-family: var(--display); font-size: 1.125rem; letter-spacing: -0.02em; }
-.of-fila--hoy .of-p b { color: var(--aviso-texto); }
-.of-pie { font-size: 0.8125rem; color: var(--muted); text-align: center; }
 
   </style>
 </head>
@@ -802,35 +727,21 @@ mark {
       </section>
 
       <section class="opcion opcion--plus entrar" style="--retraso:.18s" aria-labelledby="t-plus">
-        <span class="chip chip--borde" id="chip-plus">Tiempo limitado</span>
+        <span class="chip chip--borde">Exclusivo</span>
         <div class="opcion__fila">
           <h2 id="t-plus">Comunidad Plus</h2>
-          <p class="precio" id="precio-plus"><strong>5 USD</strong> <span>/mes</span></p>
+          <p class="precio"><strong>12.99 USD</strong> <span>/mes</span></p>
         </div>
         <ul class="puntos">
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><b class="nuevo">Nuevo</b> MCP de Motionabi: crea videos con Claude</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><b class="nuevo">Nuevo</b> Plantillas de edición: Claude edita tu video con subtítulos, hooks y motions</span></li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Mis skills, listos para instalar y usar</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Tutoriales paso a paso de cada video</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Cosas nuevas cada semana, te llegan primero</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><b class="pronto">Pronto</b> Sesiones en vivo cada semana</span></li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Todo lo de la comunidad gratis, incluido</li>
         </ul>
-        <div class="oferta" id="oferta">
-          <div class="of-cuenta" role="timer" aria-label="Tiempo que queda para el precio de 5 USD">
-            <span class="of-k"><i class="pulso"></i>El precio de 5 USD termina en</span>
-            <div class="ck">
-              <div><b data-d>--</b><i>días</i></div>
-              <div><b data-h>--</b><i>horas</i></div>
-              <div><b data-m>--</b><i>min</i></div>
-              <div><b data-s>--</b><i>seg</i></div>
-            </div>
-          </div>
-          <div class="of-dos">
-            <div class="of-fila of-fila--hoy"><span class="of-e">Hoy</span><span class="of-p"><b>5 USD</b>/mes</span></div>
-            <div class="of-fila"><span class="of-e">Desde 1 nov</span><span class="of-p"><b>12.99 USD</b>/mes</span></div>
-          </div>
-          <p class="of-pie">Quien entra antes se queda en 5 USD para siempre.</p>
-        </div>
-        <a class="btn btn--primario btn--grande" href="https://whop.com/checkout/plan_RhVl5CaluBGH1">Unirme a Plus <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
+        <a class="btn btn--primario btn--grande" href="https://whop.com/checkout/plan_OmPkW5yg4ePGg">Unirme a Plus <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
         <p class="micro">Cancelas cuando quieras. Si ya eres de Plus, tu precio no cambia.</p>
       </section>
     </div>
@@ -841,42 +752,5 @@ mark {
     </div>
   </main>
 
-  <script>
-  // Fecha límite del precio de 5 USD: 1 de noviembre, 12:00 (hora de Colombia, UTC-5).
-  // Para cambiarla, edita solo esta línea.
-  (function () {
-    var FIN = new Date('2026-11-01T12:00:00-05:00').getTime();
-    var oferta = document.getElementById('oferta');
-    var precio = document.getElementById('precio-plus');
-    var d = oferta.querySelector('[data-d]');
-    var h = oferta.querySelector('[data-h]');
-    var m = oferta.querySelector('[data-m]');
-    var s = oferta.querySelector('[data-s]');
-    function dos(n) { return n < 10 ? '0' + n : String(n); }
-
-    // Pasada la fecha: sin contador y con el precio nuevo.
-    function cerrar() {
-      oferta.hidden = true;
-      precio.innerHTML = '<strong>12.99 USD</strong> <span>/mes</span>';
-      document.getElementById('chip-plus').textContent = 'Exclusivo';
-    }
-
-    function tick() {
-      var ms = FIN - Date.now();
-      if (ms <= 0) { cerrar(); return false; }
-      var t = Math.floor(ms / 1000);
-      d.textContent = dos(Math.floor(t / 86400));
-      h.textContent = dos(Math.floor(t % 86400 / 3600));
-      m.textContent = dos(Math.floor(t % 3600 / 60));
-      s.textContent = dos(t % 60);
-      return true;
-    }
-
-    if (tick()) {
-      var reloj = setInterval(function () { if (!tick()) clearInterval(reloj); }, 1000);
-    }
-  })();
-
-  </script>
 </body>
 </html>
