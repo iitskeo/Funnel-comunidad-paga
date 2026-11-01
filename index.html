@@ -524,8 +524,8 @@ mark {
 
 .pagina {
   display: grid;
-  gap: 14px;
-  padding-block: 14px 48px;
+  gap: 12px;
+  padding-block: 10px 40px;
 }
 .app-aviso {
   display: grid;
@@ -662,6 +662,8 @@ mark {
   text-transform: uppercase;
   vertical-align: 1px;
 }
+.opcion:not(.opcion--plus) { padding: 14px; gap: 8px; }
+.opcion:not(.opcion--plus) .btn--grande { height: 44px; }
 .opcion .btn { width: 100%; }
 .opcion .btn--grande { height: 52px; }
 .btn--gratis {
@@ -709,7 +711,7 @@ mark {
       <h1 class="titulo-heroe">Mi comunidad de IA. <span>Gratis o con Plus.</span></h1>
       <p class="lead">Los prompts de todos mis videos, gratis. Y en Plus, lo que no comparto en ningún otro lado.</p>
       <!-- Número real de miembros (gratis y de pago). Actualízalo desde Whop cada tanto. -->
-      <p class="prueba"><svg class="icon" aria-hidden="true"><use href="#i-gente"/></svg><span><strong>Más de 1,500 personas</strong> ya están dentro</span></p>
+      <p class="prueba"><svg class="icon" aria-hidden="true"><use href="#i-gente"/></svg><span><strong>Más de 1,900 personas</strong> ya están dentro</span></p>
     </div>
 
     <div class="opciones">
@@ -717,13 +719,12 @@ mark {
       <section class="opcion entrar" style="--retraso:.12s" aria-labelledby="t-gratis">
         <div class="opcion__fila">
           <h2 id="t-gratis">Biblioteca de prompts</h2>
-          <p class="precio"><strong>0 USD</strong></p>
         </div>
         <ul class="puntos">
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>El prompt exacto de cada video</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Acceso a recursos</li>
         </ul>
-        <a class="btn btn--secundario btn--grande btn--gratis" href="https://whop.com/checkout/plan_SzoerRi0rgRxC">Unirme gratis <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
+        <a class="btn btn--secundario btn--grande btn--gratis" href="https://whop.com/checkout/plan_SzoerRi0rgRxC">Unirme <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
       </section>
 
       <section class="opcion opcion--plus entrar" style="--retraso:.18s" aria-labelledby="t-plus">
@@ -734,12 +735,11 @@ mark {
         </div>
         <ul class="puntos">
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><b class="nuevo">Nuevo</b> MCP de Motionabi: crea videos con Claude</span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><b class="nuevo">Nuevo</b> Plantillas de edición: Claude edita tu video con subtítulos, hooks y motions</span></li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><b class="nuevo">Nuevo</b> AbiCut: plantillas de edición con subtítulos, hooks y motions</span></li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Mis skills, listos para instalar y usar</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Tutoriales paso a paso de cada video</li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Cosas nuevas cada semana, te llegan primero</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Lo nuevo cada semana, te llega primero</li>
           <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><b class="pronto">Pronto</b> Sesiones en vivo cada semana</span></li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Todo lo de la comunidad gratis, incluido</li>
         </ul>
         <a class="btn btn--primario btn--grande" href="https://whop.com/checkout/plan_OmPkW5yg4ePGg">Unirme a Plus <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
         <p class="micro">Cancelas cuando quieras. Si ya eres de Plus, tu precio no cambia.</p>

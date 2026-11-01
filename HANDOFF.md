@@ -18,9 +18,9 @@ Repo: `iitskeo/funnel-comunidad-paga`. Rama de trabajo: `claude/elegant-rubin-pa
 
 - Barra: "itskeo/comunidad" + botón **Iniciar sesión** (`whop.com/login/?next=/itskeo/`).
 - Línea "¿Ya te uniste antes? Inicia sesión y entras a todo."
-- Título "Mi comunidad de IA. Gratis o con Plus." con su frase y la línea "**Más de 1,500 personas** ya están dentro".
-- Tarjeta 1, **gratis arriba**: Biblioteca de prompts, 0 USD, "El prompt exacto de cada video" y "Acceso a recursos". Botón "Unirme gratis" a `https://whop.com/checkout/plan_SzoerRi0rgRxC`.
-- Tarjeta 2, **Plus abajo**, destacada con borde menta y la etiqueta "Exclusivo" sobre el borde: **12.99 USD/mes**. Incluye: MCP de Motionabi (Nuevo), plantillas de edición con subtítulos, hooks y motions (Nuevo), skills, tutoriales, cosas nuevas cada semana, sesiones en vivo cada semana (Pronto) y todo lo de la comunidad gratis. Botón "Unirme a Plus" a `https://whop.com/checkout/plan_OmPkW5yg4ePGg`. Micro: "Cancelas cuando quieras. Si ya eres de Plus, tu precio no cambia."
+- Título "Mi comunidad de IA. Gratis o con Plus." con su frase y la línea "**Más de 1,900 personas** ya están dentro".
+- Tarjeta 1, **gratis arriba**, compacta y **sin precio** (el usuario pidió quitar "0 USD"): Biblioteca de prompts, "El prompt exacto de cada video" y "Acceso a recursos". Botón **"Unirme"** (ya no dice "gratis") a `https://whop.com/checkout/plan_SzoerRi0rgRxC`.
+- Tarjeta 2, **Plus abajo**, destacada con borde menta y la etiqueta "Exclusivo" sobre el borde: **12.99 USD/mes**. Incluye: MCP de Motionabi (Nuevo), **AbiCut**: plantillas de edición con subtítulos, hooks y motions (Nuevo), skills, tutoriales, lo nuevo cada semana y sesiones en vivo cada semana (Pronto). Se quitó la línea "Todo lo de la comunidad gratis, incluido" a pedido del usuario. Botón "Unirme a Plus" a `https://whop.com/checkout/plan_OmPkW5yg4ePGg`. Micro: "Cancelas cuando quieras. Si ya eres de Plus, tu precio no cambia."
 - Banner de la app de Whop al final (texto, sin botón de descarga).
 
 Es **checkout link** (la persona paga en whop.com), NO checkout embebido.
@@ -101,9 +101,9 @@ Cosas que no se pueden comprobar desde aquí (el entorno cloud no llega a whop.c
 
 1. A dónde deja Whop a la persona al terminar el checkout (gratis y Plus) y si queda logueada.
 2. Si el plan tiene opción de **redirect URL** después del checkout.
-3. Cómo se ve la landing en el celular real y desde la bio de TikTok (las medidas son simuladas con Playwright: en 390x844 se ve casi todo, en 390x720 se hace scroll).
-4. **Confirmar el nombre del conector de plantillas de edición.** El usuario lo dictó por voz como "Haiku" y no se pudo verificar; en la página se describe sin nombre: "Plantillas de edición: Claude edita tu video con subtítulos, hooks y motions". Si tiene nombre propio, se agrega.
-5. Verificar que de verdad hay **más de 1,500 miembros** (línea de prueba social, se actualiza a mano en `index.html`). Si no, bajar a "Más de 1,000".
+3. Cómo se ve la landing en el celular real y desde la bio de TikTok. Medidas simuladas (Playwright): el botón "Unirme a Plus" termina en ~799 px; entra en 844 pero no en el navegador de TikTok (~720). El usuario quiere que se vea el botón: opciones pendientes son acortar el micro de abajo, o poner título y botón de la tarjeta gratis en una sola fila (ahorra ~50 px).
+4. **AbiCut** (se escribe con B, "Abi" como en Motionabi): el usuario lo dictó como "Avi con B". Confirmar la ortografía exacta.
+5. La línea de prueba social ("Más de 1,900") se actualiza a mano en `index.html`; el usuario confirmó que ya hay 1,900.
 6. Cuando arranquen las **sesiones en vivo**, quitar la etiqueta "Pronto" de esa línea.
 7. Actualizar en Whop los **mensajes de bienvenida** (ver punto 9): el link de Plus y el precio.
 8. Si Plus promete "lo que no comparto en ningún otro lado" y "lo nuevo te llega primero", el usuario debe cumplirlo. Se le avisó.
@@ -113,7 +113,7 @@ Cosas que no se pueden comprobar desde aquí (el entorno cloud no llega a whop.c
 
 - Plus se presenta como **algo exclusivo que les sirve**, no como "apóyame".
 - Gratis arriba, Plus abajo; la tarjeta gratis más baja que la de Plus.
-- Botones con textos de acción, siempre los mismos: "Unirme gratis", "Unirme a Plus", "Iniciar sesión".
+- Botones con textos de acción, siempre los mismos: "Unirme" (gratis), "Unirme a Plus", "Iniciar sesión".
 - "¿Ya te uniste antes? Inicia sesión" va arriba.
 - Banner de la app de Whop: **al final**, texto, **sin botón de descarga**.
 - El título "Mi comunidad de IA. Gratis o con Plus." y su frase **se devolvieron a pedido del usuario** (cree que el funnel anterior convertía más). No los quites sin que lo pida.
