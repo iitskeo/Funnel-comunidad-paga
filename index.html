@@ -14,7 +14,7 @@
 /* ================= Tokens ================= */
 
 :root {
-  color-scheme: dark light;
+  color-scheme: dark;
 
   /* Color: modo oscuro (principal) */
   --bg: #0e1311;
@@ -48,21 +48,6 @@
   --max: 1320px;
   --nav-h: 64px;
   --seccion: clamp(80px, 12vw, 140px);
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #eff3f1;
-    --bg-2: #e6ece9;
-    --surface: #f8faf9;
-    --surface-2: #dde5e1;
-    --line: #cfd9d4;
-    --text: #0f1412;
-    --muted: #55625c;
-    --accent: #23935f; /* más oscuro para que se distinga sobre fondo claro */
-    --on-accent: #03170d;
-    --media-shadow: 0 40px 70px -40px rgb(15 45 30 / 0.4);
-  }
 }
 
 /* ================= Base ================= */

@@ -168,3 +168,4 @@ cd /home/user/Funnel-comunidad-paga && python3 -m http.server 8765 &
 - Debajo: "Resultados reales" (métricas y perfil de un miembro; **no** afirmar "5 días", la captura dice 3 oct a 1 nov), "Lo que te llevas por 12.99" (Motionabi 25 USD/mes y Abicut 14 USD/mes tachados, cursos/llamadas/lo nuevo sin precio a propósito), "Lo que dicen" (2 reseñas de Whop) y botón final a `plan_OmPkW5yg4ePGg`.
 - Pendiente: confirmar que 25 y 14 son precios reales por separado (si no, cambiar el tachado por "Valor estimado"); permiso del miembro para mostrar su cuenta (se quitó la leyenda a pedido del usuario); zona horaria de las llamadas no se muestra.
 - Las imágenes viven en `img/` y `copiar-a-whop.ps1` las copia a `public/img/`.
+- Solo modo oscuro: se eliminó el modo claro (prefers-color-scheme) a pedido del usuario; la página se ve igual en todos los teléfonos.
