@@ -13,6 +13,9 @@ New-Item -ItemType Directory -Force $public | Out-Null
 
 # La landing va como inicio.html: la ruta "/" de TanStack redirige ahí.
 Copy-Item (Join-Path $origen 'index.html') (Join-Path $public 'inicio.html') -Force
+# Imágenes de la landing (img/ -> public/img/).
+New-Item -ItemType Directory -Force (Join-Path $public 'img') | Out-Null
+Copy-Item (Join-Path $origen 'img\*') (Join-Path $public 'img') -Force
 Copy-Item (Join-Path $origen 'whop\index.tsx') (Join-Path $rutas 'index.tsx') -Force
 
 # Borrar del sitio lo que ya no se usa. IMPORTANTE: el funnel anterior (gracias.html, config.js)

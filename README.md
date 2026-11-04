@@ -3,6 +3,7 @@
 Landing de una sola página con el estilo de la Biblioteca @itskeo5 (`docs/ESTILO.md`, `tokens.css`).
 
 - **`index.html`**: muestra la biblioteca gratis y Comunidad Plus. Cada botón va al checkout link de Whop (`whop.com/checkout/plan_...`), así la persona pone su correo una vez y termina dentro de Whop con la sesión abierta. Los IDs de plan están directamente en los dos botones de ese archivo.
+- `img/`: capturas de la sección de validación (cursos, Motionabi, métricas y perfil de un miembro, llamadas en vivo). El script las copia a `public/img/`.
 - `tokens.css` y `docs/ESTILO.md` son la referencia de estilo.
 
 ## Publicar en Whop
