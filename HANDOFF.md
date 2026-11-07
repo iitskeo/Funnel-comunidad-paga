@@ -180,3 +180,4 @@ Inspirado en event.monetise.com (sin copiar su paleta ni su contador). Orden: ba
 Datos reales del usuario (7 nov): 2,315 en la biblioteca, 46 en Plus (no se muestra el 46 a propósito). Textos a confirmar por el usuario: "Llevo el código y la tecnología en el día a día", "construí Motionabi y Abicut", respuesta de la objeción, "la cuenta de un miembro de Plus".
 - 7 nov (c): menos botones. Solo 2 botones "Ver planes" (heroe y tras lo que incluye) que bajan a #planes; el único checkout de Plus está en su tarjeta final.
 - 7 nov (d): el precio de Plus (12.99) solo aparece en su tarjeta final. Se mantienen los valores de referencia (Motionabi 25, Abicut 14). Objeción ahora: "¿Por qué todo junto, si solo Motionabi vale 25 al mes?".
+- 7 nov (e): un solo botón arriba, "Unirme a Plus" directo al checkout. Ningún botón salta a #planes: la biblioteca gratis solo se encuentra bajando hasta el final (decisión del usuario).
