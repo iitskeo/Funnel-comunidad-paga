@@ -183,3 +183,4 @@ Datos reales del usuario (7 nov): 2,315 en la biblioteca, 46 en Plus (no se mues
 - 7 nov (e): un solo botón arriba, "Unirme a Plus" directo al checkout. Ningún botón salta a #planes: la biblioteca gratis solo se encuentra bajando hasta el final (decisión del usuario).
 - 7 nov (f): sin la tarjeta de total bajo lo que incluye; más espacio antes de "Los detalles"; la tarjeta de la biblioteca ya no dice "Gratis".
 - 7 nov (g): foto del usuario arriba del heroe (`img/keo-heroe.jpg`, sin recorte de fondo, recortada de alto). El botón de Plus termina en ~772 px en 390x844.
+- 7 nov (h): limpieza del inicio (sin 'Cancelas…' ni 'Sin saber editar'), Resultados con 2 números grandes + fila de reels (se quitó la captura de métricas), y '¿Por qué confiar en mí?' con 4 puntos cortos, línea solo entre el primer y último punto.
