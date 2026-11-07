@@ -173,3 +173,8 @@ cd /home/user/Funnel-comunidad-paga && python3 -m http.server 8765 &
 ## Actualización 7 nov: de página de elección a funnel
 
 Orden nuevo de `index.html`: "¿Ya te uniste antes?" → h1 "Mi comunidad de IA." + texto grande descriptivo → Resultados reales → Lo que te llevas por 12.99 (con botón "Unirme a Plus" debajo) → Lo que dicen → "Elige cómo entrar" con **Comunidad Plus arriba y Biblioteca de prompts (Gratis) abajo**, al final de todo → aviso de la app. Ya no existe "comunidad gratis": solo la Biblioteca de prompts. Se quitó "Gratis o con Plus". Futuro: posible VSL arriba.
+
+## Actualización 7 nov (b): estructura tipo página de evento, con nuestra paleta
+
+Inspirado en event.monetise.com (sin copiar su paleta ni su contador). Orden: barra "Nuevo: MCP de Motionabi" → heroe centrado "Crea videos con IA sin saber editar." + CTA + "Sin saber editar · Sin experiencia" + "Más de 2,300 personas ya usan mi biblioteca" → Resultados reales → CTA → 5 bloques numerados de lo que incluye (Motionabi vale 25, Abicut vale 14) + total → CTA → Qué/Cuándo/Dónde → Reseñas → CTA → "¿Por qué confiar en mí?" con foto (`img/keo.jpg`, recortada sin la TV del fondo) y línea de tiempo → objeción "¿Por qué tan barato?" → tarjetas Plus y Biblioteca al final. Plus aparece 5 veces (`plan_OmPkW5yg4ePGg`).
+Datos reales del usuario (7 nov): 2,315 en la biblioteca, 46 en Plus (no se muestra el 46 a propósito). Textos a confirmar por el usuario: "Llevo el código y la tecnología en el día a día", "construí Motionabi y Abicut", respuesta de la objeción, "la cuenta de un miembro de Plus".
