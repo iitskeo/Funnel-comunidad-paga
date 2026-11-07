@@ -169,3 +169,7 @@ cd /home/user/Funnel-comunidad-paga && python3 -m http.server 8765 &
 - Pendiente: confirmar que 25 y 14 son precios reales por separado (si no, cambiar el tachado por "Valor estimado"); permiso del miembro para mostrar su cuenta (se quitó la leyenda a pedido del usuario); zona horaria de las llamadas no se muestra.
 - Las imágenes viven en `img/` y `copiar-a-whop.ps1` las copia a `public/img/`.
 - Solo modo oscuro: se eliminó el modo claro (prefers-color-scheme) a pedido del usuario; la página se ve igual en todos los teléfonos.
+
+## Actualización 7 nov: de página de elección a funnel
+
+Orden nuevo de `index.html`: "¿Ya te uniste antes?" → h1 "Mi comunidad de IA." + texto grande descriptivo → Resultados reales → Lo que te llevas por 12.99 (con botón "Unirme a Plus" debajo) → Lo que dicen → "Elige cómo entrar" con **Comunidad Plus arriba y Biblioteca de prompts (Gratis) abajo**, al final de todo → aviso de la app. Ya no existe "comunidad gratis": solo la Biblioteca de prompts. Se quitó "Gratis o con Plus". Futuro: posible VSL arriba.

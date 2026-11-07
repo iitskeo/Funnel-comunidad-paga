@@ -695,6 +695,13 @@ mark {
 .fechas{display:flex;gap:8px}.fechas div{flex:1;text-align:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px 4px}
 .fechas b{display:block;color:var(--accent);font-family:var(--display)}.fechas span{font-size:.75rem;color:var(--muted)}
 .final{display:grid;gap:8px;text-align:center}
+
+.lead--grande{font-size:1.25rem!important;line-height:1.4;color:var(--text);max-width:34ch!important;margin:4px 0 0}
+.cta-medio{width:100%;margin-top:12px}
+.planes{display:grid;gap:12px;margin-top:22px}
+.planes__t{font-family:var(--display);font-size:1.5rem;line-height:1.15;margin:0;letter-spacing:-.01em}
+.planes .opciones{gap:14px}
+.opcion:not(.opcion--plus) .precio strong{font-size:1rem;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -716,23 +723,35 @@ mark {
     <p class="ya entrar">¿Ya te uniste antes? <a href="https://whop.com/login/?next=/itskeo/">Inicia sesión</a> y entras a todo.</p>
 
     <div class="cabeza entrar" style="--retraso:.06s">
-      <h1 class="titulo-heroe">Mi comunidad de IA. <span>Gratis o con Plus.</span></h1>
+      <h1 class="titulo-heroe">Mi comunidad de IA.</h1>
+      <p class="lead lead--grande">Aprende a crear videos con IA usando Claude. Mis herramientas, cursos, skills y llamadas en vivo, en un solo lugar, con algo nuevo cada semana.</p>
     </div>
 
-    <div class="opciones">
+    <div class="val">
+ <section><h3>Resultados reales</h3><p class="sub">Un miembro llevó su cuenta a más de 6 mil seguidores con Motionabi.</p>
+  <div class="card"><div class="res"><img src="img/metricas.png" alt="Estadísticas de Instagram"><div><div class="n">740.7 mil</div><div class="l">visualizaciones (3 oct a 1 nov)</div><div class="n">+4.4 mil</div><div class="l" style="margin:2px 0 0">seguidores nuevos</div></div></div>
+  <img loading="lazy" class="grid-img" src="img/perfil-grid.png" alt="Perfil de Instagram"></div></section>
 
-      <section class="opcion entrar" style="--retraso:.12s" aria-labelledby="t-gratis">
-        <div class="opcion__fila">
-          <h2 id="t-gratis">Biblioteca de prompts</h2>
-        </div>
-        <ul class="puntos">
-          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>El prompt exacto de cada video</li>
-          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Acceso a recursos</li>
-        </ul>
-        <a class="btn btn--secundario btn--grande btn--gratis" href="https://whop.com/checkout/plan_SzoerRi0rgRxC">Unirme <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
-      </section>
+ <section><h3>Lo que te llevas por 12.99</h3><p class="sub">Herramientas, cursos y llamadas conmigo. Todo incluido.</p>
+  <div class="card">
+   <div class="fila"><img src="img/motionabi-logo.jpg" alt=""><div><b>Motionabi</b><span>Escribes la idea, Claude anima el video con música y voz.</span></div><em>25 USD/mes</em></div>
+   <div class="fila"><img src="img/abicut.jpg" alt="Logo de Abicut" loading="lazy"><div><b>Abicut</b><span>Elige tu estilo y Claude edita tu video. 48 estilos ya.</span></div><em>14 USD/mes</em></div>
+   <div class="fila"><img src="img/cursos.png" alt="" loading="lazy" style="object-position:0 50%"><div><b>Cursos, skills y tutoriales</b><span>DaVinci Resolve, guía de Motionabi, motion-reel.</span></div><em></em></div>
+   <div class="fila"><img src="img/vivo.png" alt=""><div><b>Llamadas en vivo</b><span>Resuelvo tus dudas en directo con toda la comunidad.</span></div><em></em></div>
+   <div class="fila"><div style="width:64px;height:64px;border-radius:10px;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-weight:800;font-size:.8125rem;letter-spacing:.04em">NUEVO</div><div><b>Todo lo nuevo que sale</b><span>Cada novedad, casi cada semana, entra en tu mensualidad sin pagar de más.</span></div><em></em></div>
+   <div class="tot"><span>Todo incluido, cada mes</span><strong>12.99 USD</strong></div>
+  </div>
+  <a class="btn btn--primario btn--grande cta-medio" href="https://whop.com/checkout/plan_OmPkW5yg4ePGg">Unirme a Plus <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a></section>
 
-      <section class="opcion opcion--plus entrar" style="--retraso:.18s" aria-labelledby="t-plus">
+ <section><h3>Lo que dicen</h3><div class="rev">
+  <div class="card"><div class="st">★★★★★</div><p>La mejor comunidad sin lugar a duda, los recursos que te ofrecen no se comparan a otro.</p><small>@baasarcangel</small></div>
+  <div class="card"><div class="st">★★★★★</div><p>Graciaaas, esto me cambió la vida.</p><small>@abiarias</small></div></div></section>
+</div>
+
+    <section class="planes" id="planes" aria-labelledby="t-planes">
+      <h3 id="t-planes" class="planes__t">Elige cómo entrar</h3>
+      <div class="opciones">
+      <section class="opcion opcion--plus entrar" style="--retraso:0s" aria-labelledby="t-plus">
         <span class="chip chip--borde">Exclusivo</span>
         <div class="opcion__fila">
           <h2 id="t-plus">Comunidad Plus</h2>
@@ -749,31 +768,22 @@ mark {
         <a class="btn btn--primario btn--grande" href="https://whop.com/checkout/plan_OmPkW5yg4ePGg">Unirme a Plus <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
         <p class="micro">Cancelas cuando quieras. Si ya eres de Plus, tu precio no cambia.</p>
       </section>
-    </div>
 
-    
-<div class="val">
- <section><h3>Resultados reales</h3><p class="sub">Un miembro llevó su cuenta a más de 6 mil seguidores con Motionabi.</p>
-  <div class="card"><div class="res"><img src="img/metricas.png" alt="Estadísticas de Instagram"><div><div class="n">740.7 mil</div><div class="l">visualizaciones (3 oct a 1 nov)</div><div class="n">+4.4 mil</div><div class="l" style="margin:2px 0 0">seguidores nuevos</div></div></div>
-  <img loading="lazy" class="grid-img" src="img/perfil-grid.png" alt="Perfil de Instagram"></div></section>
+      <section class="opcion entrar" style="--retraso:0s" aria-labelledby="t-gratis">
+        <div class="opcion__fila">
+          <h2 id="t-gratis">Biblioteca de prompts</h2>
+          <p class="precio"><strong>Gratis</strong></p>
+        </div>
+        <ul class="puntos">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>El prompt exacto de cada video</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Acceso a recursos</li>
+        </ul>
+        <a class="btn btn--secundario btn--grande btn--gratis" href="https://whop.com/checkout/plan_SzoerRi0rgRxC">Unirme gratis <svg class="icon" aria-hidden="true"><use href="#i-derecha"/></svg></a>
+      </section>
+      </div>
+    </section>
 
- <section><h3>Lo que te llevas por 12.99</h3><p class="sub">Herramientas, cursos y llamadas conmigo. Todo incluido.</p>
-  <div class="card">
-   <div class="fila"><img src="img/motionabi-logo.jpg" alt=""><div><b>Motionabi</b><span>Escribes la idea, Claude anima el video con música y voz.</span></div><em>25 USD/mes</em></div>
-   <div class="fila"><img src="img/abicut.jpg" alt="Logo de Abicut" loading="lazy"><div><b>Abicut</b><span>Elige tu estilo y Claude edita tu video. 48 estilos ya.</span></div><em>14 USD/mes</em></div>
-   <div class="fila"><img src="img/cursos.png" alt="" loading="lazy" style="object-position:0 50%"><div><b>Cursos, skills y tutoriales</b><span>DaVinci Resolve, guía de Motionabi, motion-reel.</span></div><em></em></div>
-   <div class="fila"><img src="img/vivo.png" alt=""><div><b>Llamadas en vivo</b><span>Resuelvo tus dudas en directo con toda la comunidad.</span></div><em></em></div>
-   <div class="fila"><div style="width:64px;height:64px;border-radius:10px;background:var(--accent);color:var(--on-accent);display:grid;place-items:center;font-weight:800;font-size:.8125rem;letter-spacing:.04em">NUEVO</div><div><b>Todo lo nuevo que sale</b><span>Cada novedad, casi cada semana, entra en tu mensualidad sin pagar de más.</span></div><em></em></div>
-   <div class="tot"><span>Todo incluido, cada mes</span><strong>12.99 USD</strong></div>
-  </div></section>
-
- <section><h3>Lo que dicen</h3><div class="rev">
-  <div class="card"><div class="st">★★★★★</div><p>La mejor comunidad sin lugar a duda, los recursos que te ofrecen no se comparan a otro.</p><small>@baasarcangel</small></div>
-  <div class="card"><div class="st">★★★★★</div><p>Graciaaas, esto me cambió la vida.</p><small>@abiarias</small></div></div></section>
-
- <section class="final"><a class="btn btn--primario btn--grande" href="https://whop.com/checkout/plan_OmPkW5yg4ePGg">Unirme a Plus <svg class="icon"><use href="#i-derecha"/></svg></a><p style="color:var(--muted);font-size:.8125rem;margin:0">12.99 USD/mes. Cancelas cuando quieras.</p></section>
-</div>
-<div class="app-aviso">
+    <div class="app-aviso">
       <svg class="icon" aria-hidden="true"><use href="#i-movil"/></svg>
       <p><strong>Descarga la app de Whop</strong> e inicia sesión con el mismo correo para no perderte nada.</p>
     </div>
