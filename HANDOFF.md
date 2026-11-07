@@ -182,3 +182,4 @@ Datos reales del usuario (7 nov): 2,315 en la biblioteca, 46 en Plus (no se mues
 - 7 nov (d): el precio de Plus (12.99) solo aparece en su tarjeta final. Se mantienen los valores de referencia (Motionabi 25, Abicut 14). Objeción ahora: "¿Por qué todo junto, si solo Motionabi vale 25 al mes?".
 - 7 nov (e): un solo botón arriba, "Unirme a Plus" directo al checkout. Ningún botón salta a #planes: la biblioteca gratis solo se encuentra bajando hasta el final (decisión del usuario).
 - 7 nov (f): sin la tarjeta de total bajo lo que incluye; más espacio antes de "Los detalles"; la tarjeta de la biblioteca ya no dice "Gratis".
+- 7 nov (g): foto del usuario arriba del heroe (`img/keo-heroe.jpg`, sin recorte de fondo, recortada de alto). El botón de Plus termina en ~772 px en 390x844.
