@@ -20,6 +20,8 @@ whop apps deploy
 
 Desde CMD: `powershell -ExecutionPolicy Bypass -File .\copiar-a-whop.ps1`.
 
+O todo de una vez (pull, copia y deploy): `K:\automatizacion\funnel\publicar.bat`.
+
 ## Probar en local
 
 ```sh
