@@ -184,3 +184,4 @@ Datos reales del usuario (7 nov): 2,315 en la biblioteca, 46 en Plus (no se mues
 - 7 nov (f): sin la tarjeta de total bajo lo que incluye; más espacio antes de "Los detalles"; la tarjeta de la biblioteca ya no dice "Gratis".
 - 7 nov (g): foto del usuario arriba del heroe (`img/keo-heroe.jpg`, sin recorte de fondo, recortada de alto). El botón de Plus termina en ~772 px en 390x844.
 - 7 nov (h): limpieza del inicio (sin 'Cancelas…' ni 'Sin saber editar'), Resultados con 2 números grandes + fila de reels (se quitó la captura de métricas), y '¿Por qué confiar en mí?' con 4 puntos cortos, línea solo entre el primer y último punto.
+- 9 nov: todos los títulos de sección (.h) usan el mismo estilo que el h1 (Bricolage 800, 2.375rem) con la última parte en menta (<em>). La pregunta de la objeción queda más chica a propósito (.h--cita).
